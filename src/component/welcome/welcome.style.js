@@ -12,13 +12,16 @@ export const StyledH2 = styled.h2 `
   color: #707070;
 `
 export const StyledH3 = styled.h3 `
-  font-size: 14px;
+  font-size: 22px;
   color: #808080;
-`
+  line-height: 30px;
+  
+  `
 export const StyledP = styled.p `
   text-align: center;
   font-size: 14px;
   color: #808080;
+  line-height: 30px;
 `
 export const StyledDiv = styled.div `
   padding: 20px;
