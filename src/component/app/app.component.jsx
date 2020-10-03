@@ -1,14 +1,13 @@
 import React from 'react'
 import { Welcome } from '../welcome'
+import { StyledAppWrapper } from './app.style'
 
 
 const App = () => {
   return (
-    <div>
+    <StyledAppWrapper>
       <Welcome />
-      <h1>Uite ce creativi suntem</h1>
-      <p>Happy new day!</p>
-    </div>
+    </StyledAppWrapper>
   )
 }
 
