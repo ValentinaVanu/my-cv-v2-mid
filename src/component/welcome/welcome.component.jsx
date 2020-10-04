@@ -34,8 +34,7 @@ const Welcome = () => {
       <Column height={10} />
       <Column display="flex">
         <Button 
-          label="V"
-          icon="arrow-download"
+          icon="arrow-down"
           background="green"
         />
       </Column>
