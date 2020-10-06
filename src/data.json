@@ -10,10 +10,66 @@
   },
   "connect": {
     "test": "Test",
-    "buttonList":{
+    "socialList":{
       "codetap":{
-        "icon": "codetap"
-
+        "title": "CodeTap",
+        "closeIcon" : "cross",
+        "description": "I make the Front-End world a better place every day. I translate geek into English and my passion is to innovate and design for the future.",
+        "link": "codetap.academy"
+      },
+      "github":{
+        "title": "CodeTap",
+        "closeIcon" : "cross",
+        "description": "I make the Front-End world a better place every day. I translate geek into English and my passion is to innovate and design for the future.",
+        "link": "codetap.academy"
+      },
+      "linkedin":{
+        "title": "CodeTap",
+        "closeIcon" : "cross",
+        "description": "I make the Front-End world a better place every day. I translate geek into English and my passion is to innovate and design for the future.",
+        "link": "codetap.academy"
+      },
+      "stackoverflow":{
+        "title": "Stackoverflow",
+        "closeIcon" : "cross",
+        "description": "I make the Front-End world a better place every day. I translate geek into English and my passion is to innovate and design for the future.",
+        "link": "codetap.academy"
+      },
+      "codewars":{
+        "title": "Codewars",
+        "closeIcon" : "cross",
+        "description": "I make the Front-End world a better place every day. I translate geek into English and my passion is to innovate and design for the future.",
+        "link": "codetap.academy"
+      },
+      "udemy":{
+        "title": "Udemy",
+        "closeIcon" : "cross",
+        "description": "I make the Front-End world a better place every day. I translate geek into English and my passion is to innovate and design for the future.",
+        "link": "codetap.academy"
+      },
+      "facebook":{
+        "title": "Facebook",
+        "closeIcon" : "cross",
+        "description": "I make the Front-End world a better place every day. I translate geek into English and my passion is to innovate and design for the future.",
+        "link": "codetap.academy"
+      },
+      "skype":{
+        "title": "Skype",
+        "closeIcon" : "cross",
+        "description": "I make the Front-End world a better place every day. I translate geek into English and my passion is to innovate and design for the future.",
+        "link": "codetap.academy"
+      },
+      "instagram":{
+        "title": "Instagram",
+        "closeIcon" : "cross",
+        "description": "I make the Front-End world a better place every day. I translate geek into English and my passion is to innovate and design for the future.",
+        "link": "codetap.academy"
+      },
+      "twitter":{
+        "title": "Twitter",
+        "closeIcon" : "cross",
+        "description": "I make the Front-End world a better place every day. I translate geek into English and my passion is to innovate and design for the future.",
+        "link": "codetap.academy"
       }
     }
   }
