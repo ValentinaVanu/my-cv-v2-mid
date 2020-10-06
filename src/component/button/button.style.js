@@ -13,6 +13,7 @@ const getBackgroundValue = string => {
 }
 
 
+
 export const StyledButton = styled.div `
                     /* background */
   background-color: ${({ backgroundColor }) => getBackgroundValue(backgroundColor)};
@@ -22,7 +23,7 @@ export const StyledButton = styled.div `
   border-radius: 20px;
   height: 40px;
   border: 0;
-  padding: 0 ${({icon}) => icon ? 20 : 24}px;
+  padding: 0 ${({icon}) => icon ? 12 : 24}px;
   margin: 0 auto;
   display: inline-flex;
   align-items: center;

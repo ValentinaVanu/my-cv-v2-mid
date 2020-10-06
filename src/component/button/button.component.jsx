@@ -1,13 +1,17 @@
 import React from 'react'
+import { Icon } from '../icomoon'
 import { StyledButton } from './button.style'
-import iconSet from '../../assets/font/selection.json';
-import IcomoonReact from 'icomoon-react';
-
 
 const Button = ({ label, icon, background }) => {
+  const getIcon = icon => icon ? icon : "download"
+  const iconPropList = {
+    color: "#fff",
+    size: 16,
+    icon: getIcon(icon)
+  }
   return (
     <StyledButton icon={icon} backgroundColor={background}>
-      <IcomoonReact iconSet={iconSet} color="#fff" size={16} icon="arrow-down" />{label}
+      <Icon {...iconPropList} /> {label}
     </StyledButton>
   )
 }

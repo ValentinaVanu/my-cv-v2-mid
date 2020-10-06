@@ -20,7 +20,7 @@ const Connect = () => {
       <Column height={10} />
       <Column display="flex">
         <Button 
-          icon="arrow"
+          icon="arrow-down"
           background="green"
         />
       </Column>

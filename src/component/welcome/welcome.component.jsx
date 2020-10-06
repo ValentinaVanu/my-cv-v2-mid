@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button } from '../button';
 import { Column } from '../column';
+import { Icon } from '../icomoon';
 import { SectionTitle } from '../section-title';
 import * as WS from './welcome.style'
 
@@ -27,9 +28,10 @@ const Welcome = () => {
       </Column>
       <Column height={10} />
       <Column display="flex">
-        <Button 
-          label="Download CV"
-        />
+        <Button
+        icon="download"
+        label="Download CV">
+        </Button>
       </Column>
       <Column height={10} />
       <Column display="flex">
