@@ -6,6 +6,15 @@
     },
     "jobTitle": "Junior Frontend Developer",
     "sectionTitle" : "About Me",
-    "sectionDescription": "This is a description"
+    "sectionDescription": "Self-thought nerd with 22+ years of experience (in gaming). I am always ready for new challenges, reaching for the highest level. I never back down from fighting, not even from the scariest Bug. When it comes to a difficult task, teamwork wins ! So let’s have a chat, build a hero team to fight bugs and make the world a better place !"
+  },
+  "connect": {
+    "test": "Test",
+    "buttonList":{
+      "codetap":{
+        "icon": "codetap"
+
+      }
+    }
   }
 }

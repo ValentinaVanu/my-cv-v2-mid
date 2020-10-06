@@ -2,11 +2,13 @@ import React from 'react'
 import { Icon } from '../icomoon'
 import { StyledButton } from './button.style'
 
+
 const Button = ({ label, icon, background }) => {
-  const getIcon = icon => icon ? icon : "download"
+  const getIcon = icon => icon ? icon : "arrow-down"
+
   const iconPropList = {
     color: "#fff",
-    size: 16,
+    size: 18,
     icon: getIcon(icon)
   }
   return (
