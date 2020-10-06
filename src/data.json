@@ -1,0 +1,11 @@
+{
+  "welcome": {
+    "person": {
+      "firstName": "Valentina G",
+      "lastName": "Vanu"
+    },
+    "jobTitle": "Junior Frontend Developer",
+    "sectionTitle" : "About Me",
+    "sectionDescription": "This is a description"
+  }
+}
