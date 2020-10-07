@@ -58,21 +58,15 @@ const Connect = () => {
       <Column height={10} />
       <Column span={1}>
         <ButtonWrapper>
-          <SocialButton icon="codetap" />
-          <SocialButton icon="github" />
-          <SocialButton icon="linkedin" />
-          <SocialButton icon="stackoverflow" />
-          <SocialButton icon="codewars" />
-          <SocialButton icon="udemy" />
-          <SocialButton icon="facebook" />
-          <SocialButton icon="skype" />
-          <SocialButton icon="instagram" />
-          <SocialButton icon="twitter" />
+          {Object.values((connect.socialList || {})).map(({icon, description, link, title}, key) => {
+            console.log( description, link, title, key)
+            return <SocialButton icon={icon} />
+          } ) }
         </ButtonWrapper>
       </Column>
       <Column height={10} />
       <Column>
-        <SocialWrapper>{socialList && socialList.codetap.title}</SocialWrapper>
+        <SocialWrapper />
       </Column>
       <Column height={10} />
       <Column height={10} />

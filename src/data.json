@@ -13,61 +13,61 @@
     "socialList":{
       "codetap":{
         "title": "CodeTap",
-        "closeIcon" : "cross",
+        "icon" : "codetap",
         "description": "I make the Front-End world a better place every day. I translate geek into English and my passion is to innovate and design for the future.",
         "link": "codetap.academy"
       },
       "github":{
-        "title": "CodeTap",
-        "closeIcon" : "cross",
+        "title": "Github",
+        "icon" : "github",
         "description": "I make the Front-End world a better place every day. I translate geek into English and my passion is to innovate and design for the future.",
         "link": "codetap.academy"
       },
       "linkedin":{
-        "title": "CodeTap",
-        "closeIcon" : "cross",
+        "title": "Linkedin",
+        "icon" : "linkedin",
         "description": "I make the Front-End world a better place every day. I translate geek into English and my passion is to innovate and design for the future.",
         "link": "codetap.academy"
       },
       "stackoverflow":{
         "title": "Stackoverflow",
-        "closeIcon" : "cross",
+        "icon" : "stackoverflow",
         "description": "I make the Front-End world a better place every day. I translate geek into English and my passion is to innovate and design for the future.",
         "link": "codetap.academy"
       },
       "codewars":{
         "title": "Codewars",
-        "closeIcon" : "cross",
+        "icon" : "codewars",
         "description": "I make the Front-End world a better place every day. I translate geek into English and my passion is to innovate and design for the future.",
         "link": "codetap.academy"
       },
       "udemy":{
         "title": "Udemy",
-        "closeIcon" : "cross",
+        "icon" : "udemy",
         "description": "I make the Front-End world a better place every day. I translate geek into English and my passion is to innovate and design for the future.",
         "link": "codetap.academy"
       },
       "facebook":{
         "title": "Facebook",
-        "closeIcon" : "cross",
+        "icon" : "facebook",
         "description": "I make the Front-End world a better place every day. I translate geek into English and my passion is to innovate and design for the future.",
         "link": "codetap.academy"
       },
       "skype":{
         "title": "Skype",
-        "closeIcon" : "cross",
+        "icon" : "skype",
         "description": "I make the Front-End world a better place every day. I translate geek into English and my passion is to innovate and design for the future.",
         "link": "codetap.academy"
       },
       "instagram":{
         "title": "Instagram",
-        "closeIcon" : "cross",
+        "icon" : "instagram",
         "description": "I make the Front-End world a better place every day. I translate geek into English and my passion is to innovate and design for the future.",
         "link": "codetap.academy"
       },
       "twitter":{
         "title": "Twitter",
-        "closeIcon" : "cross",
+        "icon" : "twitter",
         "description": "I make the Front-End world a better place every day. I translate geek into English and my passion is to innovate and design for the future.",
         "link": "codetap.academy"
       }
