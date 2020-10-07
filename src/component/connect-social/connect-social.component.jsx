@@ -14,7 +14,7 @@ const SocialButton = ({ label, icon }) =>{
     icon: socialIcon(icon)
   }
   return(
-    <StyledSocialBtn icon={icon}>
+    <StyledSocialBtn>
       <Icon {...socialPropList}/> {label}
     </StyledSocialBtn>
   )

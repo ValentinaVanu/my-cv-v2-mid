@@ -1,10 +1,19 @@
 import React from 'react';
+import { Icon } from '../icomoon';
+import { CrossButton, StyledInfoWrap } from './connect-info.style';
 
-const socialWrapper = () => {
+const SocialWrapper = () => {
+  const iconProp = {
+    color: "#fff",
+    size: 18,
+    icon: "cross",
+  }
   return (
-    <div></div>
+    <StyledInfoWrap>
+      <CrossButton>
+        <Icon {...iconProp} />asdads
+      </CrossButton>
+    </StyledInfoWrap>
   )
 }
-export { socialWrapper }
-
-// maybe i ll use it maybe i ll put it back with connect.component & connect.style
+export { SocialWrapper }

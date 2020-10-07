@@ -5,7 +5,8 @@ import { ConnectImg } from '../connect-img';
 import { SectionTitle } from '../section-title';
 import { get } from 'axios';
 import { ButtonWrapper } from './connect.style';
-import { SocialButton } from '../connect-social/connect-social.component';
+import { SocialButton } from '../connect-social'
+import { SocialWrapper } from '../connect-info';
 
 const Connect = () => {
   const[connect, updateConnect] = useState({})
@@ -15,7 +16,6 @@ const Connect = () => {
       const getResult = async() => {
         const { data } = await get ("http://localhost:4567/connect")
         updateConnect(data)
-        console.log(data.boxTitle)
       }
       getResult()
     },
@@ -23,9 +23,24 @@ const Connect = () => {
   )
 
   const {
-    test
+    test,
+    socialList,
+    // codetap,
+    // title,
+    // closeIcon,
+    // description,
+    // link,
+    // github,
+    // linkedin,
+    // stackoverflow,
+    // codewars,
+    // udemy,
+    // facebook,
+    // skype,
+    // instagram,
+    // twitter
   } = connect
-  console.log(test)
+  console.log(socialList && socialList.codetap.title)
   return(
     <>
       <Column>
@@ -54,6 +69,10 @@ const Connect = () => {
           <SocialButton icon="instagram" />
           <SocialButton icon="twitter" />
         </ButtonWrapper>
+      </Column>
+      <Column height={10} />
+      <Column>
+        <SocialWrapper>{socialList && socialList.codetap.title}</SocialWrapper>
       </Column>
       <Column height={10} />
       <Column height={10} />

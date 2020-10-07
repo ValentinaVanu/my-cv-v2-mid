@@ -1,4 +1,4 @@
 export {
-  StyledSocialBtn
+  SocialButton
 }
- from './connect-social.style'
+ from './connect-social.component'
