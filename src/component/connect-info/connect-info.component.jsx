@@ -1,6 +1,6 @@
 import React from 'react';
 import { Icon } from '../icomoon';
-import { CrossButton, StyledInfoWrap } from './connect-info.style';
+import { CrossButton, StyledInfoWrap, StyledTitle } from './connect-info.style';
 
 const SocialWrapper = ({title}) => {
   const iconProp = {
@@ -10,9 +10,11 @@ const SocialWrapper = ({title}) => {
   }
   return (
     <StyledInfoWrap>
+      <StyledTitle>
+        {title}
+      </StyledTitle>
       <CrossButton>
         <Icon {...iconProp} />
-        {title}
       </CrossButton>
     </StyledInfoWrap>
   )

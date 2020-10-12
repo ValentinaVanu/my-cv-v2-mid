@@ -31,11 +31,26 @@ const Connect = () => {
   // console.log(Object.values((socialList || {})))
   // if(socialList){
   //   console.log(Object.keys(socialList))
-
   // }
+
+
+      // WORK ON SET AND USE EFFECT
+
+  // const HandleClick = () => {
+  //   const [click, setClick] = useState({})
+
+  //   useEffect(
+
+  //   )
+  // }
+
+
+
+
+
   const handleClick = (title) => console.log("hello", title)
-  const title = !!socialList && socialList['github'].title
-  console.log(Object.values((socialList || {})))
+  const title = Object.keys((socialList || {}))
+  // console.log(Object.keys((socialList || {})))
   return(
     <>
       <Column>
@@ -61,7 +76,9 @@ const Connect = () => {
       </Column>
       <Column height={10} />
       <Column>
-        <SocialWrapper title={title}/>
+        <SocialWrapper title={title}>
+          
+        </SocialWrapper>
       </Column>
       <Column height={10} />
       <Column height={10} />
