@@ -2,7 +2,7 @@ import React from 'react';
 import { Icon } from '../icomoon';
 import {  StyledSocialBtn } from './connect-social.style';
 
-const SocialButton = ({ label, icon }) =>{
+const SocialButton = ({ icon, label }) =>{
   const socialIcon = icon => icon ? icon : "codetap";
   const socialPropList = {
     color: "#fff",

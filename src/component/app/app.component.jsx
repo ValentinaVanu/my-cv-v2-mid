@@ -1,5 +1,6 @@
 import React from 'react'
 import { Connect } from '../connect'
+import { Skill } from '../skill/skill.component'
 import { Welcome } from '../welcome'
 import { StyledAppWrapper } from './app.style'
 
@@ -9,6 +10,7 @@ const App = () => {
     <StyledAppWrapper>
       <Welcome />
       <Connect />
+      <Skill />
     </StyledAppWrapper>
   )
 }

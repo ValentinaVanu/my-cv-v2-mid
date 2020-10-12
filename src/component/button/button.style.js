@@ -12,9 +12,7 @@ const getBackgroundValue = string => {
     : defaultValue
 }
 
-
 export const StyledButton = styled.div `
-                    /* background */
   background-color: ${({ backgroundColor }) => getBackgroundValue(backgroundColor)};
   font-size: 12px;
   font-weight: bolder;

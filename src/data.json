@@ -72,5 +72,8 @@
         "link": "codetap.academy"
       }
     }
+  },
+  "skill": {
+    "test" : "Skill Test"
   }
 }
