@@ -2,7 +2,7 @@ import React from 'react';
 import { Icon } from '../icomoon';
 import {  StyledSocialBtn } from './connect-social.style';
 
-const SocialButton = ({ icon, label }) =>{
+const SocialButton = ({ icon, label, onClick }) =>{
   const socialIcon = icon => icon ? icon : "codetap";
   const socialPropList = {
     color: "#fff",
@@ -12,8 +12,9 @@ const SocialButton = ({ icon, label }) =>{
     },
     icon: socialIcon(icon)
   }
+  console.log(onClick)
   return(
-    <StyledSocialBtn>
+    <StyledSocialBtn onClick={onClick}>
       <Icon {...socialPropList}/> {label}
     </StyledSocialBtn>
   )

@@ -2,7 +2,7 @@ import React from 'react';
 import { Icon } from '../icomoon';
 import { CrossButton, StyledInfoWrap } from './connect-info.style';
 
-const SocialWrapper = () => {
+const SocialWrapper = ({title}) => {
   const iconProp = {
     color: "#fff",
     size: 18,
@@ -11,7 +11,8 @@ const SocialWrapper = () => {
   return (
     <StyledInfoWrap>
       <CrossButton>
-        <Icon {...iconProp} />asdads
+        <Icon {...iconProp} />
+        {title}
       </CrossButton>
     </StyledInfoWrap>
   )

@@ -18,9 +18,15 @@ const Skill = () => {
     []
   )
   const {
-    test
+    test,
+    description,
+    legend,
+    itemList,
+    icon,
+    color,
+    label
   } = skill
-  console.log(test)
+  console.log(legend && legend.title)
   return (
     <>
       <Column>
@@ -28,6 +34,9 @@ const Skill = () => {
       </Column>
       <Column>
         <div>{test}</div>
+      </Column>
+      <Column>
+        <div>{legend && legend.title}</div>
       </Column>
     </>
   )

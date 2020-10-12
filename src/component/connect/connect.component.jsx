@@ -10,7 +10,7 @@ import { SocialWrapper } from '../connect-info';
 
 const Connect = () => {
   const[connect, updateConnect] = useState({})
-
+  console.log(connect)
   useEffect(
     ()=> {
       const getResult = async() => {
@@ -22,25 +22,20 @@ const Connect = () => {
     []
   )
 
+  // const title = "github"
+
   const {
     test,
-    socialList,
-    // codetap,
-    // title,
-    // closeIcon,
-    // description,
-    // link,
-    // github,
-    // linkedin,
-    // stackoverflow,
-    // codewars,
-    // udemy,
-    // facebook,
-    // skype,
-    // instagram,
-    // twitter
+    socialList 
   } = connect
-  console.log(socialList && socialList.codetap.title)
+  // console.log(Object.values((socialList || {})))
+  // if(socialList){
+  //   console.log(Object.keys(socialList))
+
+  // }
+  const handleClick = (title) => console.log("hello", title)
+  const title = !!socialList && socialList['github'].title
+  console.log(Object.values((socialList || {})))
   return(
     <>
       <Column>
@@ -58,15 +53,15 @@ const Connect = () => {
       <Column height={10} />
       <Column span={1}>
         <ButtonWrapper>
-          {Object.values((connect.socialList || {})).map(({icon, description, link, title}, key) => {
-            console.log( description, link, title, key)
-            return <SocialButton icon={icon} />
+          {Object.values((socialList || {})).map(({icon, description, link, title}, key) => {
+            // console.log( description, link, title, key)
+            return <SocialButton onClick={() => handleClick(title)} icon={icon} />
           } ) }
         </ButtonWrapper>
       </Column>
       <Column height={10} />
       <Column>
-        <SocialWrapper />
+        <SocialWrapper title={title}/>
       </Column>
       <Column height={10} />
       <Column height={10} />
