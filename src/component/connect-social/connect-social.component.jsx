@@ -12,7 +12,7 @@ const SocialButton = ({ icon, label, onClick }) =>{
     },
     icon: socialIcon(icon)
   }
-  console.log(onClick)
+  // console.log(onClick)
   return(
     <StyledSocialBtn onClick={onClick}>
       <Icon {...socialPropList}/> {label}

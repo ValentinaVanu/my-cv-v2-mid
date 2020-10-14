@@ -15,24 +15,24 @@
         "title": "CodeTap",
         "icon" : "codetap",
         "description": "I make the Front-End world a better place every day. I translate geek into English and my passion is to innovate and design for the future.",
-        "link": "codetap.academy"
+        "link": "https://codetap.academy"
       },
       "github":{
         "title": "Github",
         "icon" : "github",
-        "description": "I make the Front-End world a better place every day. I translate geek into English and my passion is to innovate and design for the future.",
+        "description": "fqwdqweqwe.",
         "link": "codetap.academy"
       },
       "linkedin":{
         "title": "Linkedin",
         "icon" : "linkedin",
-        "description": "I make the Front-End world a better place every day. I translate geek into English and my passion is to innovate and design for the future.",
+        "description": "rewtyhrsgerfrq3fq.",
         "link": "codetap.academy"
       },
       "stackoverflow":{
         "title": "Stackoverflow",
         "icon" : "stackoverflow",
-        "description": "I make the Front-End world a better place every day. I translate geek into English and my passion is to innovate and design for the future.",
+        "description": "gleqmgoirmfmreopf.",
         "link": "codetap.academy"
       },
       "codewars":{
@@ -74,6 +74,28 @@
     }
   },
   "skill": {
-    "test" : "Skill Test"
+    "test" : "Skill Test",
+    "sectionTitle": "Skills",
+    "description": "Light travels faster than sound. This is why some people appear bright until you hear them speak.",
+    "legend": {
+      "title": "Legend",
+      "itemList": [
+        {
+          "icon":"heart",
+          "color": "red",
+          "label": "Skills I love"
+        },
+        {
+          "icon":"trophy",
+          "color": "green",
+          "label": "Skills I'm good at"
+        },
+        {
+          "icon":"book",
+          "color": "orange",
+          "label": "Skills I'd love to get better at"
+        }
+      ]
+    }
   }
 }

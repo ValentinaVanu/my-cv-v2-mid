@@ -9,8 +9,9 @@ import { SocialButton } from '../connect-social'
 import { SocialWrapper } from '../connect-info';
 
 const Connect = () => {
-  const[connect, updateConnect] = useState({})
-  console.log(connect)
+  const [connect, updateConnect] = useState({})
+  const [selected, updateSelected] = useState({})
+
   useEffect(
     ()=> {
       const getResult = async() => {
@@ -22,35 +23,19 @@ const Connect = () => {
     []
   )
 
-  // const title = "github"
-
   const {
     test,
-    socialList 
+    socialList = {}
   } = connect
-  // console.log(Object.values((socialList || {})))
-  // if(socialList){
-  //   console.log(Object.keys(socialList))
-  // }
 
+  const handleClick = social => { 
+    updateSelected(social) 
+  }
 
-      // WORK ON SET AND USE EFFECT
+  const closeTheModal = () => {
+    updateSelected({})
+  }
 
-  // const HandleClick = () => {
-  //   const [click, setClick] = useState({})
-
-  //   useEffect(
-
-  //   )
-  // }
-
-
-
-
-
-  const handleClick = (title) => console.log("hello", title)
-  const title = Object.keys((socialList || {}))
-  // console.log(Object.keys((socialList || {})))
   return(
     <>
       <Column>
@@ -68,17 +53,18 @@ const Connect = () => {
       <Column height={10} />
       <Column span={1}>
         <ButtonWrapper>
-          {Object.values((socialList || {})).map(({icon, description, link, title}, key) => {
-            // console.log( description, link, title, key)
-            return <SocialButton onClick={() => handleClick(title)} icon={icon} />
+          {Object.values((socialList || {})).map(social => {
+            return <SocialButton onClick={() => handleClick(social) }
+             icon={social.icon} />
           } ) }
         </ButtonWrapper>
       </Column>
       <Column height={10} />
       <Column>
-        <SocialWrapper title={title}>
-          
-        </SocialWrapper>
+        {selected.hasOwnProperty('title') && <SocialWrapper
+          { ...selected }
+          handleClose={closeTheModal}
+        />}
       </Column>
       <Column height={10} />
       <Column height={10} />
