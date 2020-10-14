@@ -24,7 +24,6 @@ const Connect = () => {
   )
 
   const {
-    test,
     socialList = {}
   } = connect
 
@@ -42,13 +41,12 @@ const Connect = () => {
         <SectionTitle>Let's Connect</SectionTitle>
       </Column>
       <Column height={10} />
-      <Column>
-        <div>{test}</div>
-      </Column>
+      <Column height={10} />
       <Column height={10} />
       <Column display="flex">
         <ConnectImg />
       </Column>
+      <Column height={10} />
       <Column height={10} />
       <Column height={10} />
       <Column span={1}>
@@ -66,7 +64,6 @@ const Connect = () => {
           handleClose={closeTheModal}
         />}
       </Column>
-      <Column height={10} />
       <Column height={10} />
       <Column display="flex">
         <Button 

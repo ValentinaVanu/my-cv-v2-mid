@@ -20,56 +20,56 @@
       "github":{
         "title": "Github",
         "icon" : "github",
-        "description": "fqwdqweqwe.",
-        "link": "codetap.academy"
+        "description": "Here can be found the projects i recently worked on. My cv and other fun stuff. Everything is been kept up to date. My progress can be seen here daily.",
+        "link": "https://github.com/ValentinaVanu"
       },
       "linkedin":{
         "title": "Linkedin",
         "icon" : "linkedin",
-        "description": "rewtyhrsgerfrq3fq.",
-        "link": "codetap.academy"
+        "description": "For more info about me, who i was and still am working for, Skills and Education, can be accesed by a simple click on the link below",
+        "link": "https://www.linkedin.com/in/valentinavanu/"
       },
       "stackoverflow":{
         "title": "Stackoverflow",
         "icon" : "stackoverflow",
-        "description": "gleqmgoirmfmreopf.",
-        "link": "codetap.academy"
+        "description": "I am now on Stackoverflow too. My acivity will be displayed here soon as well!",
+        "link": "https://stackoverflow.com/users/14316519/valentinavanu"
       },
       "codewars":{
         "title": "Codewars",
         "icon" : "codewars",
-        "description": "I make the Front-End world a better place every day. I translate geek into English and my passion is to innovate and design for the future.",
-        "link": "codetap.academy"
+        "description": "Always working on upgrading my skills and knowledge. Up for knew challanges on Codewars now too!",
+        "link": "https://www.codewars.com/users/vanuvalentina"
       },
       "udemy":{
         "title": "Udemy",
         "icon" : "udemy",
-        "description": "I make the Front-End world a better place every day. I translate geek into English and my passion is to innovate and design for the future.",
-        "link": "codetap.academy"
+        "description": "Always on Udemy for a Boost !",
+        "link": "https://www.udemy.com/user/valentina-vanu/"
       },
       "facebook":{
         "title": "Facebook",
         "icon" : "facebook",
-        "description": "I make the Front-End world a better place every day. I translate geek into English and my passion is to innovate and design for the future.",
-        "link": "codetap.academy"
+        "description": "My personal Facebook page.",
+        "link": "https://www.facebook.com/ValentinaVanu/"
       },
       "skype":{
         "title": "Skype",
         "icon" : "skype",
-        "description": "I make the Front-End world a better place every day. I translate geek into English and my passion is to innovate and design for the future.",
+        "description": "Will update soon.",
         "link": "codetap.academy"
       },
       "instagram":{
         "title": "Instagram",
         "icon" : "instagram",
-        "description": "I make the Front-End world a better place every day. I translate geek into English and my passion is to innovate and design for the future.",
-        "link": "codetap.academy"
+        "description": "I can also be found on Instagram. Will be updated soon!",
+        "link": "https://www.instagram.com/vii.valentina/"
       },
       "twitter":{
         "title": "Twitter",
         "icon" : "twitter",
-        "description": "I make the Front-End world a better place every day. I translate geek into English and my passion is to innovate and design for the future.",
-        "link": "codetap.academy"
+        "description": "Stying informed with the latest technology.",
+        "link": "https://twitter.com/ValentinaVanu"
       }
     }
   },
