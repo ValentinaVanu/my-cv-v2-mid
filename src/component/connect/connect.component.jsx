@@ -35,7 +35,7 @@ const Connect = () => {
   const closeTheModal = () => {
     updateSelected({})
   }
-
+  
   return(
     <>
       <Column>
@@ -54,7 +54,7 @@ const Connect = () => {
       <Column span={1}>
         <ButtonWrapper>
           {Object.values((socialList || {})).map(social => {
-            return <SocialButton onClick={() => handleClick(social) }
+            return <SocialButton onClick={() => handleClick(social)}
              icon={social.icon} />
           } ) }
         </ButtonWrapper>

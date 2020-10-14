@@ -53,4 +53,8 @@ export const StyledLink = styled.a `
   font-size: 12px;
   font-weight: bold;
   line-height: 20px;
+  display:flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px;
 `

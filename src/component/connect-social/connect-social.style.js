@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 
+
 // ${({backgroundColor}) => backgroundColor ? '#D52027' : '#1875F0'};
 export const StyledSocialBtn = styled.div`
   background-color: #1875F0;

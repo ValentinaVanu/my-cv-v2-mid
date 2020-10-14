@@ -20,9 +20,11 @@ const SocialWrapper = ({title, handleClose, description, link}) => {
         {description}
       </StyledDescription>
       <StyledLinkWrap>
-        <StyledLink href={link} target="_blank" >{link}</StyledLink>
+        <StyledLink href={link} target="_blank" ><Icon icon="link" size={12} />{link}</StyledLink>
       </StyledLinkWrap>
     </StyledInfoWrap>
   )
 }
 export { SocialWrapper }
+
+
