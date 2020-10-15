@@ -4,7 +4,7 @@ import { get } from 'axios';
 import { Column } from '../column';
 import { SectionTitle } from '../section-title';
 import { Button } from '../button';
-import { LegendList, StyledIcon, StyledLabel, StyledLi, SkillTitle, StyledNumber } from './skill.style';
+import { LegendList, StyledIcon, StyledLabel, StyledLi, SkillTitle, StyledNumber, Description } from './skill.style';
 import { Icon } from '../icomoon';
 import { SkillList } from '../skillList';
 
@@ -14,6 +14,7 @@ const Skill = () => {
     legend: {},
     frontEnd: {},
     backEnd: {},
+    Others: {},
     loading: true,
   })
 
@@ -43,7 +44,12 @@ const Skill = () => {
     backEnd: {
       backTitle = "",
       backSkillList = []
-    }
+    },
+    Others: {
+      othersTitle = "",
+      otherSkillList = []
+    },
+    description
   } = skill
   console.log(itemList, skill)
   return (
@@ -89,7 +95,7 @@ const Skill = () => {
         <div>
           {skillList.map(skill => {
             return (
-            <SkillList background={skill.color} label={skill.label} />
+            <SkillList key={skill.label} background={skill.color} label={skill.label} />
             )
           })}
         </div>
@@ -104,13 +110,29 @@ const Skill = () => {
           <div>
             {backSkillList.map(back => {
               return (
-              <SkillList background={back.color} label={back.label} />
+              <SkillList key={back.label} background={back.color} label={back.label} />
             )})}
           </div>
       </Column>
       <Column height={10} />
       <Column>
-        <SkillTitle>{backTitle}</SkillTitle>
+        <SkillTitle>{othersTitle}</SkillTitle>
+      </Column>
+      <Column height={10} />
+      <Column>
+        {
+          otherSkillList.map(other => {
+            return (
+              <SkillList key={other.label} background={other.color} label={other.label}/>
+            )
+          })
+        }
+      </Column>
+      <Column height={10} />
+      <Column>
+        <Description>
+          {description}
+        </Description>
       </Column>
       <Column height={10} />
       <Column height={10} />

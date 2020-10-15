@@ -1,6 +1,13 @@
 import styled from 'styled-components'
 
-
+export const Description = styled.div `
+  padding: 20px;
+  border-radius: 6px;
+  font-size: 14px;
+  line-height: 30px;
+  color: #808080;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+`
 
 export const SkillTitle = styled.div `
   color: #808080;

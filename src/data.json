@@ -191,6 +191,35 @@
           "label": "GraphQL"
         }
       ]
-    } 
+    },
+    "Others":{
+      "othersTitle": "Others",
+      "otherSkillList": [
+        {
+           "color": "red",
+          "label": "Windows"
+        },
+        {
+           "color": "red",
+          "label": "Linux"
+        },
+        {
+           "color": "red",
+          "label": "Mac OSx"
+        },
+        {
+          "color": "green",
+          "label": "Jira"
+        },
+        {
+          "color": "green",
+          "label": "Agile"
+        },
+        {
+          "color": "green",
+          "label": "Rally"
+        }
+      ] 
+    }
   }
 }
