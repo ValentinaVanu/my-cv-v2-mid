@@ -81,17 +81,20 @@
         {
           "icon":"heart",
           "color": "red",
-          "label": "Skills I love"
+          "label": "Skills I love",
+          "number": "1"
         },
         {
           "icon":"trophy",
           "color": "green",
-          "label": "Skills I'm good at"
+          "label": "Skills I'm good at",
+          "number": "2"
         },
         {
           "icon":"book",
           "color": "orange",
-          "label": "Skills I'd love to get better at"
+          "label": "Skills I'd love to get better at",
+          "number": "3"
         }
       ]
     }

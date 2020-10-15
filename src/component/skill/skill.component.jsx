@@ -4,6 +4,8 @@ import { get } from 'axios';
 import { Column } from '../column';
 import { SectionTitle } from '../section-title';
 import { Button } from '../button';
+import { LegendList, StyledIcon, StyledLabel, StyledLi, SkillTitle, StyledNumber } from './skill.style';
+import { Icon } from '../icomoon';
 
 const Skill = () => {
   const [skill, updateSkill] = useState({
@@ -38,19 +40,33 @@ const Skill = () => {
       <Column>
         <SectionTitle>{sectionTitle}</SectionTitle>
       </Column>
+      <Column height={10} />
+      <Column height={10} />
       <Column>
         {skill.loading && (
           <div>Loading Amazing Data</div>
         )}
         {!skill.loading && (
-          <div>
+          <SkillTitle>
             {title}
-          </div>
+          </SkillTitle>
         )}
       </Column>
+      <Column height={10} />
+      <Column height={10} />
       <Column>
-          {itemList.map(item => {
-            return (<div key={item.icon}>{item.icon}</div>)})}
+          <LegendList>
+            {itemList.map(item => {
+              return (
+                // <StyledUl key={item.icon}>
+                  <StyledLi key={item.icon}>
+                    <StyledIcon >
+                      <Icon color={item.color} icon={item.icon} />
+                    </StyledIcon>< StyledLabel>{item.label}</ StyledLabel><StyledNumber>{item.number}</StyledNumber>
+                  </StyledLi>
+                // </StyledUl>
+              )})}
+          </LegendList>
       </Column>
       <Column height={10} />
       <Column display="flex">
