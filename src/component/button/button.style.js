@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const getBackgroundValue = string => {
+export const getBackgroundValue = string => {
   const defaultValue  = '#1875F0';
   const backList = {
     green: '#0f0',

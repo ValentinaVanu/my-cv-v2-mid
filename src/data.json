@@ -97,6 +97,51 @@
           "number": "3"
         }
       ]
+    },
+    "frontEnd": {
+      "frontTitle" : "Front End",
+      "skillList": [
+        {
+          "color": "red",
+          "label": "HTML"
+        },
+        {
+          "color": "red",
+          "label": "CSS"
+        },
+        {
+          "color": "red",
+          "label": "JavaScript"
+        },
+        {
+          "color": "red",
+          "label": "React"
+        },
+        {
+          "color": "red",
+          "label": "Redux"
+        },
+        {
+          "color": "red",
+          "label": "Styled Components"
+        },
+        {
+          "color": "green",
+          "label": "Sass"
+        },
+        {
+          "color": "green",
+          "label": "Less"
+        },
+        {
+          "color": "green",
+          "label": "Material UI"
+        },
+        {
+          "color": "green",
+          "label": "SEO"
+        }
+      ]
     }
   }
 }

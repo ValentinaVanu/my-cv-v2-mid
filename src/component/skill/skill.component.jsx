@@ -6,11 +6,13 @@ import { SectionTitle } from '../section-title';
 import { Button } from '../button';
 import { LegendList, StyledIcon, StyledLabel, StyledLi, SkillTitle, StyledNumber } from './skill.style';
 import { Icon } from '../icomoon';
+import { Front } from '../skillList';
 
 const Skill = () => {
   const [skill, updateSkill] = useState({
     sectionTitle: "",
     legend: {},
+    frontEnd: {},
     loading: true,
   })
 
@@ -32,6 +34,10 @@ const Skill = () => {
     legend: {
       title = "",
       itemList = [],
+    },
+    frontEnd: {
+      frontTitle = "",
+      skillList = []
     }
   } = skill
   console.log(itemList, skill)
@@ -67,6 +73,21 @@ const Skill = () => {
                 // </StyledUl>
               )})}
           </LegendList>
+      </Column>
+      <Column height={10} />
+      <Column height={10} />
+      <Column>
+        <SkillTitle>{frontTitle}</SkillTitle>
+      </Column>
+      <Column height={10} />
+      <Column>
+        <div>
+          {skillList.map(skill => {
+            return (
+            <Front background={skill.color}label={skill.label}></Front>
+            )
+          })}
+        </div>
       </Column>
       <Column height={10} />
       <Column display="flex">
