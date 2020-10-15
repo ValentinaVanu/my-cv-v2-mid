@@ -6,13 +6,14 @@ import { SectionTitle } from '../section-title';
 import { Button } from '../button';
 import { LegendList, StyledIcon, StyledLabel, StyledLi, SkillTitle, StyledNumber } from './skill.style';
 import { Icon } from '../icomoon';
-import { Front } from '../skillList';
+import { SkillList } from '../skillList';
 
 const Skill = () => {
   const [skill, updateSkill] = useState({
     sectionTitle: "",
     legend: {},
     frontEnd: {},
+    backEnd: {},
     loading: true,
   })
 
@@ -38,6 +39,10 @@ const Skill = () => {
     frontEnd: {
       frontTitle = "",
       skillList = []
+    },
+    backEnd: {
+      backTitle = "",
+      backSkillList = []
     }
   } = skill
   console.log(itemList, skill)
@@ -84,11 +89,30 @@ const Skill = () => {
         <div>
           {skillList.map(skill => {
             return (
-            <Front background={skill.color}label={skill.label}></Front>
+            <SkillList background={skill.color} label={skill.label} />
             )
           })}
         </div>
       </Column>
+      <Column height={10} />
+      <Column height={10} />
+      <Column>
+        <SkillTitle>{backTitle}</SkillTitle>
+      </Column>
+      <Column height={10} />
+      <Column>
+          <div>
+            {backSkillList.map(back => {
+              return (
+              <SkillList background={back.color} label={back.label} />
+            )})}
+          </div>
+      </Column>
+      <Column height={10} />
+      <Column>
+        <SkillTitle>{backTitle}</SkillTitle>
+      </Column>
+      <Column height={10} />
       <Column height={10} />
       <Column display="flex">
         <Button 

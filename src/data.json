@@ -142,6 +142,55 @@
           "label": "SEO"
         }
       ]
-    }
+    },
+    "backEnd": {
+      "backTitle" : "Back End",
+      "backSkillList": [
+        {
+          "color": "red",
+          "label": "Pug"
+        },
+        {
+          "color": "red",
+          "label": "NodeJS"
+        },
+        {
+          "color": "red",
+          "label": "FireBase"
+        },
+        {
+          "color": "green",
+          "label": "Git"
+        },
+        {
+          "color": "green",
+          "label": "Linux"
+        },
+        {
+          "color": "green",
+          "label": "Rest"
+        },
+        {
+          "color": "green",
+          "label": "MySQL"
+        },
+        {
+          "color": "gold",
+          "label": "SMS"
+        },
+        {
+          "color": "gold",
+          "label": "BockChain"
+        },
+        {
+          "color": "gold",
+          "label": "Elastic Search"
+        },
+        {
+          "color": "gold",
+          "label": "GraphQL"
+        }
+      ]
+    } 
   }
 }

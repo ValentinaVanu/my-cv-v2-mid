@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const getBackgroundValue = string => {
   const defaultValue  = '#1875F0';
   const backList = {
+    gold: '#F18F1C',
     green: '#0f0',
     red: '#d52027'
   }

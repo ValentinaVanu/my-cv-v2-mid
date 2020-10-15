@@ -1,4 +1,4 @@
 export {
-  Front
+  SkillList
 }
 from './skillList.component'
