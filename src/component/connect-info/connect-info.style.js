@@ -57,4 +57,5 @@ export const StyledLink = styled.a `
   justify-content: space-evenly;
   align-items: center;
   padding: 10px;
+
 `

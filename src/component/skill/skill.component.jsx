@@ -3,41 +3,64 @@ import { useState } from 'react';
 import { get } from 'axios';
 import { Column } from '../column';
 import { SectionTitle } from '../section-title';
+import { Button } from '../button';
 
 const Skill = () => {
-  const[skill, updateSkill] = useState({})
+  const [skill, updateSkill] = useState({
+    sectionTitle: "",
+    legend: {},
+    loading: true,
+  })
 
   useEffect(
-    () => {
+    ()=> {
       const getResult = async() => {
         const { data } = await get ("http://localhost:4567/skill")
-        updateSkill(data)
+        updateSkill({
+          ...data,
+          loading: false
+        })
       }
       getResult()
     },
     []
   )
   const {
-    test,
-    description,
-    legend,
-    itemList,
-    icon,
-    color,
-    label
+    sectionTitle,
+    legend: {
+      title = "",
+      itemList = [],
+    }
   } = skill
-  console.log(legend && legend.title)
+  console.log(itemList, skill)
   return (
     <>
       <Column>
-        <SectionTitle>Skills</SectionTitle>
+        <SectionTitle>{sectionTitle}</SectionTitle>
       </Column>
       <Column>
-        <div>{test}</div>
+        {skill.loading && (
+          <div>Loading Amazing Data</div>
+        )}
+        {!skill.loading && (
+          <div>
+            {title}
+          </div>
+        )}
       </Column>
       <Column>
-        <div>{legend && legend.title}</div>
+          {itemList.map(item => {
+            return (<div key={item.icon}>{item.icon}</div>)})}
       </Column>
+      <Column height={10} />
+      <Column display="flex">
+        <Button 
+          icon="arrow-down"
+          background="green"
+        />
+      </Column>
+      <Column height={10} />
+
     </>
   )
 }

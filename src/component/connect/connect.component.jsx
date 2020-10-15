@@ -22,7 +22,6 @@ const Connect = () => {
     },
     []
   )
-
   const {
     socialList = {}
   } = connect
@@ -52,7 +51,7 @@ const Connect = () => {
       <Column span={1}>
         <ButtonWrapper>
           {Object.values((socialList || {})).map(social => {
-            return <SocialButton onClick={() => handleClick(social)}
+            return <SocialButton key={social.icon} background={'d52027'} onClick={() =>{ handleClick(social)} }
              icon={social.icon} />
           } ) }
         </ButtonWrapper>

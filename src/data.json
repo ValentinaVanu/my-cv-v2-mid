@@ -9,7 +9,6 @@
     "sectionDescription": "Self-thought nerd with 22+ years of experience (in gaming). I am always ready for new challenges, reaching for the highest level. I never back down from fighting, not even from the scariest Bug. When it comes to a difficult task, teamwork wins ! So let’s have a chat, build a hero team to fight bugs and make the world a better place !"
   },
   "connect": {
-    "test": "Test",
     "socialList":{
       "codetap":{
         "title": "CodeTap",
@@ -74,7 +73,6 @@
     }
   },
   "skill": {
-    "test" : "Skill Test",
     "sectionTitle": "Skills",
     "description": "Light travels faster than sound. This is why some people appear bright until you hear them speak.",
     "legend": {
