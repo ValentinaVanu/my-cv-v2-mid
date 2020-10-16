@@ -221,5 +221,8 @@
         }
       ] 
     }
+  },
+  "experience": {
+    "sectionTitle": "Experience"
   }
 }
