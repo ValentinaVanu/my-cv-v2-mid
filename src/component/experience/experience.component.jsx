@@ -3,10 +3,12 @@ import { get } from 'axios'
 import { Column } from '../column';
 import { SectionTitle } from '../section-title';
 import { Button } from '../button';
-import { Chevron, CompanyName, EachJob, Info, JobDate, JobPic, JobTitle, JobWrapper, MoreInfo } from './experience.styled';
-
+import { CompanyName, EachJob, JobPic, JobTitle, JobWrapper } from './experience.styled';
+import { Chevron } from '../chevron'
+import { MoreInfo } from '../expInfo'
 
 const Experience = () => {
+  const [selected, updateSelected] = useState({})
   const [experience, updateExp] = useState ({
     loading: true
   })
@@ -28,6 +30,11 @@ const Experience = () => {
     sectionTitle,
     jobList = [],
   } = experience
+
+//   const chevronClick = job =>{
+//     updateSelected(job)
+// }
+
   return (
     <>
     <Column>
@@ -46,12 +53,11 @@ const Experience = () => {
             <EachJob>
               <JobPic><img src={job.iconPath}/></JobPic>
               <JobTitle>{job.jobTitle}</JobTitle>
-              <Chevron>V</Chevron>
+              <Chevron key={job.companyName} onClick={() => {chevronClick(job)}}>V</Chevron>
               <CompanyName>{job.companyName}</CompanyName>
-              <MoreInfo>
-                <JobDate>{job.startDate} - {job.endDate}</JobDate>
-                <Info>moreInfoList</Info>
-              </MoreInfo>
+                {/* {selected.hasOwnProperty('companyName') && <MoreInfo 
+                  { ...selected } />} */}
+                {/* <MoreInfo /> */}
             </EachJob>
               )
             })}
