@@ -3,7 +3,8 @@ import { get } from 'axios'
 import { Column } from '../column';
 import { SectionTitle } from '../section-title';
 import { Button } from '../button';
-import { EachJob, JobWrapper } from './experience.styled';
+import { Chevron, CompanyName, EachJob, Info, JobDate, JobPic, JobTitle, JobWrapper, MoreInfo } from './experience.styled';
+
 
 const Experience = () => {
   const [experience, updateExp] = useState ({
@@ -43,11 +44,14 @@ const Experience = () => {
         {jobList.map(job => {
           return (
             <EachJob>
-              <div>{job.iconPath}</div>
-              <div>{job.jobTitle}</div>
-              <div>{job.startDate} - {job.endDate}</div>
-              <div>{job.companyName}</div>
-              <div>moreInfoList</div>
+              <JobPic><img src={job.iconPath}/></JobPic>
+              <JobTitle>{job.jobTitle}</JobTitle>
+              <Chevron>V</Chevron>
+              <CompanyName>{job.companyName}</CompanyName>
+              <MoreInfo>
+                <JobDate>{job.startDate} - {job.endDate}</JobDate>
+                <Info>moreInfoList</Info>
+              </MoreInfo>
             </EachJob>
               )
             })}

@@ -229,7 +229,7 @@
         "jobTitle":"Junior Web Developer",
         "startDate": "2020  july 29th",
         "endDate": "present",
-        "iconPath": "codetap.png",
+        "iconPath": "assets/image/company-logo/codetap.png",
         "companyName": "Codetap Academy",
         "moreInfoList": [
           "Mentored by Marian Zburlea",
@@ -242,7 +242,7 @@
         "jobTitle":"Junior Web Developer",
         "startDate": "2018 February",
         "endDate": "2018 August",
-        "iconPath": "it-school.png",
+        "iconPath": "assets/image/company-logo/it-school.png",
         "companyName": "The informal School of IT",
         "moreInfoList": [
           "I had the chance to learn more about JavaScript.",
@@ -254,7 +254,7 @@
         "jobTitle":"Junior Web Developer",
         "startDate": "2017 November",
         "endDate": "2018 January",
-        "iconPath": "udacity.png",
+        "iconPath": "assets/image/company-logo/udacity.png",
         "companyName": "Udacity",
         "moreInfoList": [
           "I learned HTML and CSS.",
