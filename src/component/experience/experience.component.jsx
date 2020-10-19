@@ -3,12 +3,12 @@ import { get } from 'axios'
 import { Column } from '../column';
 import { SectionTitle } from '../section-title';
 import { Button } from '../button';
-import { CompanyName, EachJob, JobPic, JobTitle, JobWrapper } from './experience.styled';
+import { CompanyName, EachJob, Info, JobDate, JobPic, JobTitle, JobWrapper, MoreInfo } from './experience.styled';
 import { Chevron } from '../chevron'
-import { MoreInfo } from '../expInfo'
+
 
 const Experience = () => {
-  const [selected, updateSelected] = useState({})
+  const [isToggled, setToggled] = useState({})
   const [experience, updateExp] = useState ({
     loading: true
   })
@@ -18,7 +18,7 @@ const Experience = () => {
       const getResult = async() => {
         const { data } = await get ("http://localhost:4567/experience")
         updateExp({
-          ...data,
+          ...data ,
           loading: false
         })
       }
@@ -28,13 +28,17 @@ const Experience = () => {
   )
   const {
     sectionTitle,
-    jobList = [],
+    jobList = [
+      moreInfoList = []
+    ],
   } = experience
 
+  const toggle = (job) => {
+    setToggled(job)
+  }
 //   const chevronClick = job =>{
-//     updateSelected(job)
+//     selected ? updateSelected(job) : updateSelected({});
 // }
-
   return (
     <>
     <Column>
@@ -50,15 +54,27 @@ const Experience = () => {
       <JobWrapper >
         {jobList.map(job => {
           return (
-            <EachJob>
-              <JobPic><img src={job.iconPath}/></JobPic>
-              <JobTitle>{job.jobTitle}</JobTitle>
-              <Chevron key={job.companyName} onClick={() => {chevronClick(job)}}>V</Chevron>
-              <CompanyName>{job.companyName}</CompanyName>
-                {/* {selected.hasOwnProperty('companyName') && <MoreInfo 
-                  { ...selected } />} */}
-                {/* <MoreInfo /> */}
-            </EachJob>
+            <div>
+              <EachJob key={job.companyName}>
+                <JobPic><img src={job.iconPath} alt='img' /></JobPic>
+                <JobTitle>{job.jobTitle}</JobTitle>
+                <Chevron onClick={() => { toggle(job)} } />
+                <CompanyName>{job.companyName}</CompanyName>
+              </EachJob>
+              <div>
+                {isToggled.hasOwnProperty('startDate') &&
+                  <MoreInfo>
+                    <JobDate>{job.startDate} - {job.endDate}</JobDate>
+                    <Info>
+                      {moreInfoList.map(moreInfo => {
+                        return (
+                          <div>{moreInfo}</div>
+                        )
+                      })}
+                    </Info>
+                  </MoreInfo> }
+              </div>
+            </div>
               )
             })}
       </JobWrapper>

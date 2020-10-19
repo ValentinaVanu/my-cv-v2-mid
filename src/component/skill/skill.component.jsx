@@ -51,7 +51,6 @@ const Skill = () => {
     },
     description
   } = skill
-  console.log(itemList, skill)
   return (
     <>
       <Column>
