@@ -29,7 +29,7 @@ const Experience = () => {
   const {
     sectionTitle,
     jobList = [
-      moreInfoList = []
+      // moreInfoList = []
     ],
   } = experience
 
@@ -66,9 +66,9 @@ const Experience = () => {
                   <MoreInfo>
                     <JobDate>{job.startDate} - {job.endDate}</JobDate>
                     <Info>
-                      {moreInfoList.map(moreInfo => {
+                      {/* {moreInfoList.map(moreInfo => {
                         return (
-                          <div>{moreInfo}</div>
+                          <div>{moreInfo}</div> */}
                         )
                       })}
                     </Info>
