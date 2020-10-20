@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 // ${({backgroundColor}) => backgroundColor ? '#D52027' : '#1875F0'};
 export const StyledSocialBtn = styled.div`
-  background-color: #1875F0;
+  background-color: ${({ isSelected }) => isSelected ? '#d52027' : '#1875F0'};
   height: 68px;
   width: 68px;
   border-radius: 50%;
@@ -11,4 +11,5 @@ export const StyledSocialBtn = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 `

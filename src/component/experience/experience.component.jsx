@@ -5,40 +5,40 @@ import { SectionTitle } from '../section-title';
 import { Button } from '../button';
 import { CompanyName, EachJob, Info, JobDate, JobPic, JobTitle, JobWrapper, MoreInfo } from './experience.styled';
 import { Chevron } from '../chevron'
+import CodeTapPng from '../../assets/image/company-logo/codetap.png'
+import ITSchoolPng from '../../assets/image/company-logo/it-schooll.png'
 
+const imageList = [CodeTapPng, ITSchoolPng]
 
 const Experience = () => {
-  const [isToggled, setToggled] = useState({})
-  const [experience, updateExp] = useState ({
-    loading: true
-  })
-
+  const [sectionTitle, updateSectionTitle] = useState("");
+  const [jobList, updateJobList] = useState([])
   useEffect(
-    ()=> {
-      const getResult = async() => {
-        const { data } = await get ("http://localhost:4567/experience")
-        updateExp({
-          ...data ,
-          loading: false
-        })
+    () => {
+      try {
+        const getResult = async() => {
+          const { data } = await get ("http://localhost:4567/experience")
+          updateSectionTitle(data.sectionTitle)
+          updateJobList(data.jobList)
+        }
+        getResult()
+      } catch (error) {
+        console.log(`Error:`, error)
       }
-      getResult()
     },
     []
   )
-  const {
-    sectionTitle,
-    jobList = [
-      // moreInfoList = []
-    ],
-  } = experience
 
-  const toggle = (job) => {
-    setToggled(job)
+  const toggleThis = key => {
+    updateJobList(
+      jobList.map((job, cheie) => ({ ...job, isToggled: cheie !== key ? false : job.isToggled ? false : true }))
+      // jobList.map((job, cheie) => ({ ...job, isToggled: cheie === key ? true : false }))
+      // jobList.map((job, cheie) => cheie === key
+      //   ? ({ ...job, isToggled: true })
+      //   : ({ ...job, isToggled: false})
+      // )
+    )
   }
-//   const chevronClick = job =>{
-//     selected ? updateSelected(job) : updateSelected({});
-// }
   return (
     <>
     <Column>
@@ -52,28 +52,29 @@ const Experience = () => {
     <Column height={10} />
     <Column>
       <JobWrapper >
-        {jobList.map(job => {
+        {jobList.map(({ companyName, iconPath, jobTitle, startDate, endDate, isToggled = false }, key) => {
           return (
             <div>
-              <EachJob key={job.companyName}>
-                <JobPic><img src={job.iconPath} alt='img' /></JobPic>
-                <JobTitle>{job.jobTitle}</JobTitle>
-                <Chevron onClick={() => { toggle(job)} } />
-                <CompanyName>{job.companyName}</CompanyName>
+              <EachJob key={companyName}>
+                <JobPic><img src={imageList[key]} alt='img' width="40" /></JobPic>
+                <JobTitle>{jobTitle}</JobTitle>
+                <Chevron onClick={() => toggleThis(key) } />
+                <CompanyName>{companyName}</CompanyName>
               </EachJob>
-              <div>
-                {isToggled.hasOwnProperty('startDate') &&
+              {isToggled && (
+                <div>
                   <MoreInfo>
-                    <JobDate>{job.startDate} - {job.endDate}</JobDate>
+                    <JobDate>{startDate} - {endDate}</JobDate>
                     <Info>
-                      {/* {moreInfoList.map(moreInfo => {
+                      {/* {job.moreInfoList.map(moreInfo => {
                         return (
-                          <div>{moreInfo}</div> */}
+                          <div>{moreInfo}</div>
                         )
-                      })}
+                      })} */}
                     </Info>
-                  </MoreInfo> }
-              </div>
+                  </MoreInfo>
+                </div>
+              )}
             </div>
               )
             })}

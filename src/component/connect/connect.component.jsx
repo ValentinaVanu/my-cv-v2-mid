@@ -51,7 +51,7 @@ const Connect = () => {
       <Column span={1}>
         <ButtonWrapper>
           {Object.values((socialList || {})).map(social => {
-            return <SocialButton key={social.icon}  onClick={() =>{ handleClick(social)} }
+            return <SocialButton isSelected={social.icon === selected.icon} key={social.icon}  onClick={() =>{ handleClick(social)} }
              icon={social.icon} />
           } ) }
         </ButtonWrapper>
