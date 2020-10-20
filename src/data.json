@@ -229,7 +229,6 @@
         "jobTitle":"Junior Web Developer",
         "startDate": "2020  july 29th",
         "endDate": "present",
-        "iconPath": "assets/image/company-logo/codetap.png",
         "companyName": "Codetap Academy",
         "moreInfoList": [
           "The learning project achieved Zero technical dept through refactoring the web application using React, Redux, NodeJS, HTML, CSS",
@@ -242,7 +241,6 @@
         "jobTitle":"Front End Developer",
         "startDate": "2020 February",
         "endDate": "2020 May",
-        "iconPath": "it-school.png",
         "companyName": "Sandline",
         "moreInfoList": [
           "Brought in new technologies like Pug and Sass to improve web platforms.",
@@ -254,7 +252,6 @@
         "jobTitle":"Front End Developer",
         "startDate": "2017 November",
         "endDate": "2018 January",
-        "iconPath": "assets/image/company-logo/udacity.png",
         "companyName": "HarbourMed LLC",
         "moreInfoList": [
           "Ongoing premium service to keep the website up-to-date, including website’s WordPress core",
