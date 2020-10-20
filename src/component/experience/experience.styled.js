@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 
-
+export const StyledInfo = styled.div `
+  font-weight: medium;
+  line-height: 30px;
+  padding: 18px;
+`
 
 export const Info = styled.div `
   font-size: 14px;
@@ -39,9 +43,9 @@ export const JobPic =styled.div `
   grid-column: 1/2;
   grid-row: 1/3;
   background-color: #fff;
-  border: 1px solid #808080;
-  width: 40px;
-  height: 40px;
+  /* border: 1px solid #808080; */
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
 
 `

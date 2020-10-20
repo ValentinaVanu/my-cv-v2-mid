@@ -232,35 +232,35 @@
         "iconPath": "assets/image/company-logo/codetap.png",
         "companyName": "Codetap Academy",
         "moreInfoList": [
-          "Mentored by Marian Zburlea",
-          "Pug was introduced to me, it opened a whole new world.",
-          "Scss changed the way i looked at CSS and styling a web page in general !",
-          "I finally had the chance to put all the puzzle pieces together and find my passion."
+          "The learning project achieved Zero technical dept through refactoring the web application using React, Redux, NodeJS, HTML, CSS",
+          "We’ve also managed to speed up executing tasks and deliver more features to the client by adopting and implementing Material UI library which allowed us to focus on feature implementation.",
+          "Update the interfaces with the new look and do bug fixing ,pixel perfect ,using React and Jsx",
+          "Making decisions on various challenging issues that arise on a daily basis."
         ]
       },
       {
-        "jobTitle":"Junior Web Developer",
-        "startDate": "2018 February",
-        "endDate": "2018 August",
-        "iconPath": "assets/image/company-logo/it-school.png",
-        "companyName": "The informal School of IT",
+        "jobTitle":"Front End Developer",
+        "startDate": "2020 February",
+        "endDate": "2020 May",
+        "iconPath": "it-school.png",
+        "companyName": "Sandline",
         "moreInfoList": [
-          "I had the chance to learn more about JavaScript.",
-          "Practiced JavaScript Vanilla on diffrent projects.",
-          "Learned to work with a group of people, share ideas and help eachother."
+          "Brought in new technologies like Pug and Sass to improve web platforms.",
+          "Changed the UI for better interaction and flow. Implemented mobile first approach and responsive web design to improve the user interface and increase the conversion rate.",
+          "Design user interface and other custom designs using Photoshop, Illustrator."
         ]
       },
       {
-        "jobTitle":"Junior Web Developer",
+        "jobTitle":"Front End Developer",
         "startDate": "2017 November",
         "endDate": "2018 January",
         "iconPath": "assets/image/company-logo/udacity.png",
-        "companyName": "Udacity",
+        "companyName": "HarbourMed LLC",
         "moreInfoList": [
-          "I learned HTML and CSS.",
-          "I was also introduced to JavaScript.",
-          "I have done my few basic projects. ",
-          "When I finished the course I was awarded a NanoDegree."
+          "Ongoing premium service to keep the website up-to-date, including website’s WordPress core",
+          "Encouraging traffic growth and making sure Google is happy to make my client happy .",
+          "Updating content plugins and themes. ",
+          "Regularly checking the websites for issues and mistakes, keeping it updated and relevant."
         ]
       }
     ]

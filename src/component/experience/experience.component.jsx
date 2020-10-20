@@ -5,10 +5,11 @@ import { SectionTitle } from '../section-title';
 import { Button } from '../button';
 import { CompanyName, EachJob, Info, JobDate, JobPic, JobTitle, JobWrapper, MoreInfo } from './experience.styled';
 import { Chevron } from '../chevron'
-import CodeTapPng from '../../assets/image/company-logo/codetap.png'
-import ITSchoolPng from '../../assets/image/company-logo/it-schooll.png'
+import BitBeePng from '../../assets/image/company-logo/bitbee.png'
+import SandlinePng from '../../assets/image/company-logo/sandline.png'
+import HarbourMedPng from '../../assets/image/company-logo/harbourmed.png'
 
-const imageList = [CodeTapPng, ITSchoolPng]
+const imageList = [BitBeePng, SandlinePng, HarbourMedPng]
 
 const Experience = () => {
   const [sectionTitle, updateSectionTitle] = useState("");
@@ -46,17 +47,14 @@ const Experience = () => {
     </Column>
     <Column height={10} />
     <Column height={10} />
-    <Column>
-      <div>Hello</div>
-    </Column>
     <Column height={10} />
     <Column>
       <JobWrapper >
-        {jobList.map(({ companyName, iconPath, jobTitle, startDate, endDate, isToggled = false }, key) => {
+        {jobList.map(({ companyName, jobTitle, startDate, endDate, moreInfoList, isToggled = false }, key) => {
           return (
             <div>
               <EachJob key={companyName}>
-                <JobPic><img src={imageList[key]} alt='img' width="40" /></JobPic>
+                <JobPic><img src={imageList[key]} alt='img' width="50" /></JobPic>
                 <JobTitle>{jobTitle}</JobTitle>
                 <Chevron onClick={() => toggleThis(key) } />
                 <CompanyName>{companyName}</CompanyName>
@@ -66,11 +64,11 @@ const Experience = () => {
                   <MoreInfo>
                     <JobDate>{startDate} - {endDate}</JobDate>
                     <Info>
-                      {/* {job.moreInfoList.map(moreInfo => {
+                      {moreInfoList.map(moreInfo => {
                         return (
                           <div>{moreInfo}</div>
                         )
-                      })} */}
+                      })}
                     </Info>
                   </MoreInfo>
                 </div>
