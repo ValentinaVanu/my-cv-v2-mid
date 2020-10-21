@@ -2,6 +2,9 @@ import React, { useEffect, useState } from 'react';
 import get from 'axios';
 import { Column } from '../column';
 import { SectionTitle } from '../section-title';
+import { Button } from '../button';
+import { StyledTitle } from './open-source.styled';
+import { Icon } from '../icomoon';
 
 const OpenSource = () => {
   const [openSource, updateOpenSource] = useState ({})
@@ -21,7 +24,9 @@ const OpenSource = () => {
     []
   )
   const {
-    sectionTitle = ""
+    sectionTitle,
+    statsTitle,
+    statsList = []
   } = openSource
 
   return (
@@ -29,6 +34,35 @@ const OpenSource = () => {
       <Column>
         <SectionTitle>{sectionTitle}</SectionTitle>
       </Column>
+      <Column height={10} />
+      <Column height={10} />
+      <Column>
+        <StyledTitle>{statsTitle}</StyledTitle>
+      </Column>
+      <Column>
+        {statsList.map(stats => {
+          return(
+            <div>
+              <Icon icon={stats.icon} />
+              <div>{stats.content.map( content => {
+                return (
+                  <div>{content}</div>
+                )
+              })}</div>
+            </div>
+          )
+        })}
+      </Column>
+      <Column height={10} />
+      <Column height={10} />
+      <Column display="flex">
+        <Button 
+          icon="arrow-down"
+          background="green"
+        />
+      </Column>
+      <Column height={10} />
+
     </>
   )
 }
