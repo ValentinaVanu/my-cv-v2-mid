@@ -261,5 +261,34 @@
         ]
       }
     ]
+  },
+  "openSource": {
+    "sectionTitle": "Open source",
+    "statsTitle": "Stats",
+    "statsList":[
+      {
+        "icon": "github",
+        "content": [
+          "Contributions last year: 25",
+          "Longest streak: 767"
+        ]
+      },
+      {
+        "icon": "codewars",
+        "content": [
+          "Rank: 4kyu",
+          "Honor: 630"
+        ]
+      },
+      {
+        "icon": "stackoverflow",
+        "content": [
+          "Top: 5%",
+          "Reputation: 7,367",
+          "People reached: 3,000,000",
+          "Answers: 102"
+        ]
+      }
+    ]
   }
 }
