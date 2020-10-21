@@ -3,7 +3,7 @@ import get from 'axios';
 import { Column } from '../column';
 import { SectionTitle } from '../section-title';
 import { Button } from '../button';
-import { StyledTitle } from './open-source.styled';
+import { EachStats, StatsWrapper, StyledTitle, StatsContent, CenteredIcon } from './open-source.styled';
 import { Icon } from '../icomoon';
 
 const OpenSource = () => {
@@ -40,18 +40,24 @@ const OpenSource = () => {
         <StyledTitle>{statsTitle}</StyledTitle>
       </Column>
       <Column>
-        {statsList.map(stats => {
-          return(
-            <div>
-              <Icon icon={stats.icon} />
-              <div>{stats.content.map( content => {
-                return (
-                  <div>{content}</div>
-                )
-              })}</div>
-            </div>
-          )
-        })}
+        <StatsWrapper>
+          {statsList.map(stats => {
+            return(
+              <EachStats>
+                <CenteredIcon>
+                  <Icon icon={stats.icon} />
+                </CenteredIcon>
+                <div>
+                  {stats.content.map( content => {
+                  return (
+                    <StatsContent>{content}</StatsContent>
+                  )
+                })}
+                </div>
+              </EachStats>
+            )
+          })}
+        </StatsWrapper>
       </Column>
       <Column height={10} />
       <Column height={10} />
