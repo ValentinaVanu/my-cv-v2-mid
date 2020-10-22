@@ -3,7 +3,7 @@ import get from 'axios';
 import { Column } from '../column';
 import { SectionTitle } from '../section-title';
 import { Button } from '../button';
-import { EachStats, StatsWrapper, StyledTitle, StatsContent, CenteredIcon } from './open-source.styled';
+import { EachStats, StatsWrapper, StyledTitle, StatsContent, CenteredIcon, GitTitle, GitLanguages } from './open-source.styled';
 import { Icon } from '../icomoon';
 
 const OpenSource = () => {
@@ -45,7 +45,7 @@ const OpenSource = () => {
         <StatsWrapper>
           {statsList.map(stats => {
             return(
-              <EachStats>
+              <EachStats key={stats.icon}>
                 <CenteredIcon>
                   <Icon icon={stats.icon} />
                 </CenteredIcon>
@@ -62,8 +62,30 @@ const OpenSource = () => {
         </StatsWrapper>
       <Column height={10} />
       <Column height={10} />
+      <Column height={10} />
       <Column>
           <StyledTitle>{gitTitle}</StyledTitle>
+      </Column>
+      <Column height={10} />
+      <Column height={10} />
+      <Column>
+          <div>
+            {gitList.map( git => {
+              return (
+                <Column>
+                <StatsWrapper key={git.title}>
+                  <GitTitle>{git.title}</GitTitle>
+                  <GitLanguages>{git.languages}</GitLanguages>
+                </StatsWrapper>
+                <Column height={10} />
+                <Column height={10} />
+                <Column height={10} />
+                <Column height={10} />
+                <Column height={10} />
+                </Column>
+              )
+            })}
+          </div>
       </Column>
       </Column>
       <Column height={10} />

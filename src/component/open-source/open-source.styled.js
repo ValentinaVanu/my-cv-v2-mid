@@ -1,5 +1,19 @@
 import styled from 'styled-components'
 
+
+export const GitLanguages = styled.div `
+  color: #707070;
+  font-style: italic;
+  padding: 0px 20px 12px 20px;
+`
+
+export const GitTitle = styled.div `
+  padding: 20px 0px 0px 20px;
+  font-size: 13px;
+  font-weight: bold;
+  color: #707070;
+`
+
 export const CenteredIcon = styled.div `
   padding: 5px 10px;
 `
@@ -29,4 +43,5 @@ export const StyledTitle = styled.div `
   font-size: 22px;
   line-height: 30px;
   color: #707070;
+  font-weight: bold;
 `
