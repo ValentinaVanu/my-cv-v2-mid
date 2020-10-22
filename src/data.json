@@ -289,6 +289,21 @@
           "Answers: soon"
         ]
       }
+    ],
+    "gitTitle":"GitHub projects",
+    "gitList":[
+      {
+        "title": "My Cv v2 React",
+        "languages": "HTML, CSS, Git, Sass, JSON, React, React Hooks, JavaScript"
+      },
+      {
+        "title": "Pug Starter",
+        "languages": "HTML, CSS, Git, Pug, Sass, Json"
+      },
+      {
+        "title": "My Cv v2 starter",
+        "languages": "HTML, CSS, Git"
+      }
     ]
   }
 }

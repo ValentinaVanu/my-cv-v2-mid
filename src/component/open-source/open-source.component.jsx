@@ -26,7 +26,9 @@ const OpenSource = () => {
   const {
     sectionTitle,
     statsTitle,
-    statsList = []
+    statsList = [],
+    gitTitle,
+    gitList = []
   } = openSource
 
   return (
@@ -58,6 +60,11 @@ const OpenSource = () => {
             )
           })}
         </StatsWrapper>
+      <Column height={10} />
+      <Column height={10} />
+      <Column>
+          <StyledTitle>{gitTitle}</StyledTitle>
+      </Column>
       </Column>
       <Column height={10} />
       <Column height={10} />
