@@ -5,7 +5,11 @@ export const getBackgroundValue = string => {
   const backList = {
     gold: '#F18F1C',
     green: '#0f0',
-    red: '#d52027'
+    red: '#d52027',
+    purple: '#9820D5',
+    pink: '#CA20D5',
+    yellow: 'F0E218',
+    brown: '#AA650B'
   }
 
   return backList.hasOwnProperty(string)

@@ -3,7 +3,7 @@ import get from 'axios';
 import { Column } from '../column';
 import { SectionTitle } from '../section-title';
 import { Button } from '../button';
-import { EachStats, StatsWrapper, StyledTitle, StatsContent, CenteredIcon, GitTitle, GitLanguages } from './open-source.styled';
+import { EachStats, StatsWrapper, StyledTitle, StatsContent, CenteredIcon, GitTitle, GitLanguages, ColorBarWrap } from './open-source.styled';
 import { Icon } from '../icomoon';
 
 const OpenSource = () => {
@@ -31,6 +31,11 @@ const OpenSource = () => {
     gitList = []
   } = openSource
 
+  const SocialBar = (background, width) =>{
+    return(
+      <ColorBarWrap background={background} width={width}>{sectionTitle}</ColorBarWrap>
+    )
+  }
   return (
     <>
       <Column>
@@ -76,6 +81,13 @@ const OpenSource = () => {
                 <StatsWrapper key={git.title}>
                   <GitTitle>{git.title}</GitTitle>
                   <GitLanguages>{git.languages}</GitLanguages>
+                  <div>
+                    {git.colorBar.map(color => {
+                      return (
+                        <SocialBar background="red" >{color.percent}</SocialBar>
+                      )
+                    })}
+                  </div>
                 </StatsWrapper>
                 <Column height={10} />
                 <Column height={10} />

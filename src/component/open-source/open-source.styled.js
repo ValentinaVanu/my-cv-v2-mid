@@ -1,5 +1,12 @@
 import styled from 'styled-components'
+import { getBackgroundValue } from '../button/button.style'
 
+
+export const ColorBarWrap = styled.div `
+  display: inline-block;
+  background-color: ${({background}) => getBackgroundValue(background)};
+  height: 5px;
+`
 
 export const GitLanguages = styled.div `
   color: #707070;

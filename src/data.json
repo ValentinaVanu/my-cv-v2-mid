@@ -294,15 +294,69 @@
     "gitList":[
       {
         "title": "My Cv v2 React",
-        "languages": "HTML, CSS, Git, Sass, JSON, React, React Hooks, JavaScript"
+        "languages": "HTML, CSS, Git, Sass, JSON, React, React Hooks, JavaScript",
+        "colorBar": [
+          {
+            "color": "#D52027",
+            "percent": "5%"
+          },
+          {
+            "color": "purple",
+            "percent": "7%"
+          },
+          {
+            "color": "pink",
+            "percent": "10%"
+          },
+          {
+            "color": "yellow",
+            "percent": "78%"
+          }
+        ]
       },
       {
         "title": "Pug Starter",
-        "languages": "HTML, CSS, Git, Pug, Sass, Json"
+        "languages": "HTML, CSS, Git, Pug, Sass, Json",
+        "colorBar": [
+          {
+            "color": "yellow",
+            "percent":"49%"
+          },
+          {
+            "color": "red",
+            "percent": "41%"
+          },
+          {
+            "color": "purple",
+            "percent": "10%"
+          }
+        ]
       },
       {
-        "title": "My Cv v2 starter",
-        "languages": "HTML, CSS, Git"
+        "title": "My Cv v2 junior",
+        "languages": "HTML, CSS, Git, Pug",
+        "colorBar": [
+          {
+            "color": "red",
+            "percent": "25%"
+          },
+          {
+            "color": "purple",
+            "percent": "5%"
+          },
+          {
+            "color": "pink",
+            "percent": "26%"
+          },
+          {
+            "color": "yellow",
+            "percent": "31%"
+          },
+          {
+            "color": "brown",
+            "percent": "11%"
+          }
+        ]
       }
     ]
   }
