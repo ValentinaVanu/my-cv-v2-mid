@@ -2,6 +2,22 @@ import styled from 'styled-components'
 import { getBackgroundValue } from '../button/button.style'
 
 
+export const EachPink =styled.div `
+  background-color: #FF006D;
+  color: #fff;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+`
+
+export const PinkWrap = styled.div `
+  display: flex;
+  float: right;
+`
 
 export const getWidthValue = string => {
   const defaultValue = '100%';

@@ -3,7 +3,7 @@ import get from 'axios';
 import { Column } from '../column';
 import { SectionTitle } from '../section-title';
 import { Button } from '../button';
-import { EachStats, StatsWrapper, StyledTitle, StatsContent, CenteredIcon, GitTitle, GitLanguages, ColorBarWrap } from './open-source.styled';
+import { EachStats, StatsWrapper, StyledTitle, StatsContent, CenteredIcon, GitTitle, GitLanguages, ColorBarWrap, PinkWrap, EachPink } from './open-source.styled';
 import { Icon } from '../icomoon';
 
 const OpenSource = () => {
@@ -88,10 +88,15 @@ const OpenSource = () => {
                           background={bar.color}
                           width={bar.percent}
                         ></ColorBarWrap>
-                      )
-                    })}
+                        )
+                      })}
                   </div>
                 </StatsWrapper>
+                <PinkWrap>
+                  <EachPink> <Icon icon="github"/> </EachPink>
+                  <EachPink> <Icon icon="info"/> </EachPink>
+                  <EachPink> <Icon icon="youtube"/> </EachPink>
+                </PinkWrap>
                 <Column height={10} />
                 <Column height={10} />
                 <Column height={10} />
