@@ -15,7 +15,13 @@ const OpenSource = () => {
       try {
         const getResult = async() => {
           const{ data } = await get ('http://localhost:4567/openSource')
-          updateOpenSource(data)
+          updateOpenSource({
+            ...data,
+            gitList: data.gitList.map(item => ({
+              ...item,
+              showMoreDetails: false,
+            }))
+          })
         }
         getResult()
       } catch (error) {
@@ -32,6 +38,15 @@ const OpenSource = () => {
     gitList = []
   } = openSource
 
+  const toggleInfo = (title) => {
+    updateOpenSource({
+      ...openSource,
+      gitList: openSource.gitList.map(item => ({
+        ...item,
+        showMoreDetails: item.title === title
+      }))
+    })
+  }
   return (
     <>
       <Column>
@@ -77,14 +92,14 @@ const OpenSource = () => {
                 <StatsWrapper key={git.title}>
                   <GitTitle>{git.title}</GitTitle>
                   <GitLanguages>{git.languages}</GitLanguages>
-                  <div>
-                    {Object.values((git.moreDetails || {})).map(details => {
+                  {git.showMoreDetails && <div>
+                    {git.moreDetails.commits.map(commit => {
                       return (
-                        <div>{details.commits}</div>
+                        <CenteredIcon><Icon icon={commit.icon}/>{commit.text}</CenteredIcon>
                       )
                     })
                     }
-                  </div>
+                  </div>}
                   {/* <CommitWrap>
                     {git.commits.map(each => {
                       return (
@@ -102,9 +117,9 @@ const OpenSource = () => {
                       })}
                 </StatsWrapper>
                 <PinkWrap>
-                  <EachPink> <Icon icon="info"/> </EachPink>
-                  <EachPink> <Icon icon="github"/> </EachPink>
-                  <EachPink> <Icon icon="youtube"/> </EachPink>
+                  <EachPink onClick={()=> toggleInfo(git.title)}><Icon icon="info"/> </EachPink>
+                  <EachPink><Icon icon="github"/> </EachPink>
+                  <EachPink><Icon icon="youtube"/> </EachPink>
                 </PinkWrap>
                 <Column height={10} />
                 <Column height={10} />
