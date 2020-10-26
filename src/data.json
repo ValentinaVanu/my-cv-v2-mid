@@ -312,6 +312,20 @@
             "color": "yellow",
             "percent": "RjavaScript"
           }
+        ],
+        "commits" : [
+          {
+            "icon": "commits",
+            "text": "Commits: 43"
+          },
+          {
+            "icon": "stars",
+            "text": "Stars: 0"
+          },
+          {
+            "icon": "forks",
+            "text": "Forks: 0 "
+          }
         ]
       },
       {
@@ -329,6 +343,20 @@
           {
             "color": "purple",
             "percent": "Pcss"
+          }
+        ],
+        "commits" : [
+          {
+            "icon": "commits",
+            "text": "Commits: 256"
+          },
+          {
+            "icon": "stars",
+            "text": "Stars: 0"
+          },
+          {
+            "icon": "forks",
+            "text": "Forks: 18 "
           }
         ]
       },
@@ -355,6 +383,20 @@
           {
             "color": "brown",
             "percent": "Jpug"
+          }
+        ],
+        "commits" : [
+          {
+            "icon": "commits",
+            "text": "Commits: 83"
+          },
+          {
+            "icon": "stars",
+            "text": "Stars: 0"
+          },
+          {
+            "icon": "forks",
+            "text": "Forks: 20 "
           }
         ]
       }

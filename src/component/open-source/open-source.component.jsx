@@ -3,7 +3,7 @@ import get from 'axios';
 import { Column } from '../column';
 import { SectionTitle } from '../section-title';
 import { Button } from '../button';
-import { EachStats, StatsWrapper, StyledTitle, StatsContent, CenteredIcon, GitTitle, GitLanguages, ColorBarWrap, PinkWrap, EachPink } from './open-source.styled';
+import { EachStats, StatsWrapper, StyledTitle, StatsContent, CenteredIcon, GitTitle, GitLanguages, ColorBarWrap, PinkWrap, EachPink, CommitWrap } from './open-source.styled';
 import { Icon } from '../icomoon';
 
 const OpenSource = () => {
@@ -81,20 +81,25 @@ const OpenSource = () => {
                 <StatsWrapper key={git.title}>
                   <GitTitle>{git.title}</GitTitle>
                   <GitLanguages>{git.languages}</GitLanguages>
-                  <div>
+                  <CommitWrap>
+                    {git.commits.map(each => {
+                      return (
+                        <CenteredIcon><Icon icon ={each.icon}/>{each.text}</CenteredIcon>
+                      )
+                    })}
+                  </CommitWrap>
                     {git.colorBar.map(bar => {
                       return (
                         <ColorBarWrap 
                           background={bar.color}
                           width={bar.percent}
-                        ></ColorBarWrap>
+                        />
                         )
                       })}
-                  </div>
                 </StatsWrapper>
                 <PinkWrap>
-                  <EachPink> <Icon icon="github"/> </EachPink>
                   <EachPink> <Icon icon="info"/> </EachPink>
+                  <EachPink> <Icon icon="github"/> </EachPink>
                   <EachPink> <Icon icon="youtube"/> </EachPink>
                 </PinkWrap>
                 <Column height={10} />
