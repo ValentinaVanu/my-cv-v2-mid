@@ -6,10 +6,18 @@ import { getBackgroundValue } from '../button/button.style'
 export const getWidthValue = string => {
   const defaultValue = '100%';
   const widthList = {
-    html: "5%",
-    css: "7%",
-    scss: "10%",
-    javaScript: "78%"
+    Rhtml: "5%",
+    Rcss: "7%",
+    Rscss: "10%",
+    RjavaScript: "78%",
+    PjavaScript : "49%",
+    Phtml: "41%",
+    Pcss: "10%",
+    Jhtml: "25%",
+    Jcss: "5%",
+    Jscss: "26%",
+    JjavaScript: "31%",
+    Jpug: "13%"
   }
   return widthList.hasOwnProperty(string)
     ? widthList[string]
@@ -32,6 +40,7 @@ export const GitLanguages = styled.div `
 export const GitTitle = styled.div `
   padding: 20px 0px 0px 20px;
   font-size: 13px;
+  line-height: 30px;
   font-weight: bold;
   color: #707070;
 `
@@ -57,7 +66,6 @@ export const EachStats = styled.div `
 export const StatsWrapper = styled.div `
   border-radius: 6px;
   font-size: 14px;
-  line-height: 30px;
   border: 2px solid #808080;
 `
 

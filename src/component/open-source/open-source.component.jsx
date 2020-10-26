@@ -87,7 +87,7 @@ const OpenSource = () => {
                         <ColorBarWrap 
                           background={bar.color}
                           width={bar.percent}
-                        >{bar.color}</ColorBarWrap>
+                        ></ColorBarWrap>
                       )
                     })}
                   </div>

@@ -298,19 +298,19 @@
         "colorBar": [
           {
             "color": "red",
-            "percent": "5%"
+            "percent": "Rhtml"
           },
           {
             "color": "purple",
-            "percent": "7%"
+            "percent": "Rcss"
           },
           {
             "color": "pink",
-            "percent": "10%"
+            "percent": "Rscss"
           },
           {
             "color": "yellow",
-            "percent": "78%"
+            "percent": "RjavaScript"
           }
         ]
       },
@@ -320,15 +320,15 @@
         "colorBar": [
           {
             "color": "yellow",
-            "percent":"49%"
+            "percent":"PjavaScript"
           },
           {
             "color": "red",
-            "percent": "41%"
+            "percent": "Phtml"
           },
           {
             "color": "purple",
-            "percent": "10%"
+            "percent": "Pcss"
           }
         ]
       },
@@ -338,23 +338,23 @@
         "colorBar": [
           {
             "color": "red",
-            "percent": "25%"
+            "percent": "Jhtml"
           },
           {
             "color": "purple",
-            "percent": "5%"
+            "percent": "Jcss"
           },
           {
             "color": "pink",
-            "percent": "26%"
+            "percent": "Jscss"
           },
           {
             "color": "yellow",
-            "percent": "31%"
+            "percent": "JjavaScript"
           },
           {
             "color": "brown",
-            "percent": "11%"
+            "percent": "Jpug"
           }
         ]
       }
