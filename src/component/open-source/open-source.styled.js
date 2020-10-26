@@ -2,10 +2,25 @@ import styled from 'styled-components'
 import { getBackgroundValue } from '../button/button.style'
 
 
+
+export const getWidthValue = string => {
+  const defaultValue = '100%';
+  const widthList = {
+    html: "5%",
+    css: "7%",
+    scss: "10%",
+    javaScript: "78%"
+  }
+  return widthList.hasOwnProperty(string)
+    ? widthList[string]
+    : defaultValue
+} 
+
 export const ColorBarWrap = styled.div `
   display: inline-block;
-  background-color: ${({background}) => getBackgroundValue(background)};
+  background-color:${({ background }) => getBackgroundValue(background)};
   height: 5px;
+  width: ${({width}) => getWidthValue(width)};
 `
 
 export const GitLanguages = styled.div `

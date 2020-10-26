@@ -31,11 +31,11 @@ const OpenSource = () => {
     gitList = []
   } = openSource
 
-  const SocialBar = (background, width) =>{
-    return(
-      <ColorBarWrap background={background} width={width}>{sectionTitle}</ColorBarWrap>
-    )
-  }
+  // const SocialBar = (background, width) =>{
+  //   return(
+  //     <ColorBarWrap background={background} width={width}>{sectionTitle}</ColorBarWrap>
+  //   )
+  // }
   return (
     <>
       <Column>
@@ -82,9 +82,12 @@ const OpenSource = () => {
                   <GitTitle>{git.title}</GitTitle>
                   <GitLanguages>{git.languages}</GitLanguages>
                   <div>
-                    {git.colorBar.map(color => {
+                    {git.colorBar.map(bar => {
                       return (
-                        <SocialBar background="red" >{color.percent}</SocialBar>
+                        <ColorBarWrap 
+                          background={bar.color}
+                          width={bar.percent}
+                        >{bar.color}</ColorBarWrap>
                       )
                     })}
                   </div>

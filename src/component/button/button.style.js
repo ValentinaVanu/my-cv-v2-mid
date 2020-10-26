@@ -8,10 +8,9 @@ export const getBackgroundValue = string => {
     red: '#d52027',
     purple: '#9820D5',
     pink: '#CA20D5',
-    yellow: 'F0E218',
+    yellow: '#F0E218',
     brown: '#AA650B'
   }
-
   return backList.hasOwnProperty(string)
     ? backList[string]
     : defaultValue

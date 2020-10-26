@@ -297,7 +297,7 @@
         "languages": "HTML, CSS, Git, Sass, JSON, React, React Hooks, JavaScript",
         "colorBar": [
           {
-            "color": "#D52027",
+            "color": "red",
             "percent": "5%"
           },
           {
