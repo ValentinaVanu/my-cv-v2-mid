@@ -313,20 +313,22 @@
             "percent": "RjavaScript"
           }
         ],
-        "commits" : [
-          {
-            "icon": "commits",
-            "text": "Commits: 43"
-          },
-          {
-            "icon": "stars",
-            "text": "Stars: 0"
-          },
-          {
-            "icon": "forks",
-            "text": "Forks: 0 "
-          }
-        ]
+        "moreDetails": {
+          "commits" : [
+            {
+              "icon": "commits",
+              "text": "Commits: 43"
+            },
+            {
+              "icon": "stars",
+              "text": "Stars: 0"
+            },
+            {
+              "icon": "forks",
+              "text": "Forks: 0 "
+            }
+          ]
+        }
       },
       {
         "title": "Pug Starter",
@@ -345,20 +347,22 @@
             "percent": "Pcss"
           }
         ],
-        "commits" : [
-          {
-            "icon": "commits",
-            "text": "Commits: 256"
-          },
-          {
-            "icon": "stars",
-            "text": "Stars: 0"
-          },
-          {
-            "icon": "forks",
-            "text": "Forks: 18 "
-          }
-        ]
+        "moreDetails": {
+          "commits" : [
+            {
+              "icon": "commits",
+              "text": "Commits: 256"
+            },
+            {
+              "icon": "stars",
+              "text": "Stars: 0"
+            },
+            {
+              "icon": "forks",
+              "text": "Forks: 18 "
+            }
+          ]
+        }
       },
       {
         "title": "My Cv v2 junior",
@@ -385,20 +389,22 @@
             "percent": "Jpug"
           }
         ],
-        "commits" : [
-          {
-            "icon": "commits",
-            "text": "Commits: 83"
-          },
-          {
-            "icon": "stars",
-            "text": "Stars: 0"
-          },
-          {
-            "icon": "forks",
-            "text": "Forks: 20 "
-          }
-        ]
+        "moreDetails": {
+          "commits" : [
+            {
+              "icon": "commits",
+              "text": "Commits: 83"
+            },
+            {
+              "icon": "stars",
+              "text": "Stars: 0"
+            },
+            {
+              "icon": "forks",
+              "text": "Forks: 20 "
+            }
+          ]
+        }
       }
     ]
   }

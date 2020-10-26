@@ -8,6 +8,7 @@ import { Icon } from '../icomoon';
 
 const OpenSource = () => {
   const [openSource, updateOpenSource] = useState ({})
+  // const [statsList, updateStatsList] = useState ({})
   
   useEffect(
     () => {
@@ -31,11 +32,6 @@ const OpenSource = () => {
     gitList = []
   } = openSource
 
-  // const SocialBar = (background, width) =>{
-  //   return(
-  //     <ColorBarWrap background={background} width={width}>{sectionTitle}</ColorBarWrap>
-  //   )
-  // }
   return (
     <>
       <Column>
@@ -81,13 +77,21 @@ const OpenSource = () => {
                 <StatsWrapper key={git.title}>
                   <GitTitle>{git.title}</GitTitle>
                   <GitLanguages>{git.languages}</GitLanguages>
-                  <CommitWrap>
+                  <div>
+                    {Object.values((git.moreDetails || {})).map(details => {
+                      return (
+                        <div>{details.commits}</div>
+                      )
+                    })
+                    }
+                  </div>
+                  {/* <CommitWrap>
                     {git.commits.map(each => {
                       return (
                         <CenteredIcon><Icon icon ={each.icon}/>{each.text}</CenteredIcon>
                       )
                     })}
-                  </CommitWrap>
+                  </CommitWrap> */}
                     {git.colorBar.map(bar => {
                       return (
                         <ColorBarWrap 
