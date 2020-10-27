@@ -3,6 +3,17 @@ import { getBackgroundValue } from '../button/button.style'
 
 
 
+export const PercentWrap =styled.div `
+  border-top: 2px solid #808080;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 14px;
+  color: #808080;
+  /* padding: 10px; */
+
+`
+
 export const CommitWrap = styled.div `
   border-top: 2px solid #808080;
   display: flex;

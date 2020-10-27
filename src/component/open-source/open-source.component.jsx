@@ -3,12 +3,11 @@ import get from 'axios';
 import { Column } from '../column';
 import { SectionTitle } from '../section-title';
 import { Button } from '../button';
-import { EachStats, StatsWrapper, StyledTitle, StatsContent, CenteredIcon, GitTitle, GitLanguages, ColorBarWrap, PinkWrap, EachPink, CommitWrap } from './open-source.styled';
+import { EachStats, StatsWrapper, StyledTitle, StatsContent, CenteredIcon, GitTitle, GitLanguages, ColorBarWrap, PinkWrap, EachPink, CommitWrap, PercentWrap } from './open-source.styled';
 import { Icon } from '../icomoon';
 
 const OpenSource = () => {
   const [openSource, updateOpenSource] = useState ({})
-  // const [statsList, updateStatsList] = useState ({})
   
   useEffect(
     () => {
@@ -93,20 +92,26 @@ const OpenSource = () => {
                   <GitTitle>{git.title}</GitTitle>
                   <GitLanguages>{git.languages}</GitLanguages>
                   {git.showMoreDetails && <div>
-                    {git.moreDetails.commits.map(commit => {
-                      return (
-                        <CenteredIcon><Icon icon={commit.icon}/>{commit.text}</CenteredIcon>
-                      )
-                    })
-                    }
+                    <PercentWrap>
+                      {git.moreDetails.percentage.map(percent => {
+                        return (
+                          <div>
+                            <ul>
+                              <li>{percent}</li>
+                            </ul>
+                          </div>
+                        )
+                      })}
+                    </PercentWrap>
+                    <CommitWrap>
+                      {git.moreDetails.commits.map(commit => {
+                        return (
+                          <CenteredIcon><Icon icon={commit.icon}/>{commit.text}</CenteredIcon>
+                        )
+                      })
+                      }
+                    </CommitWrap>
                   </div>}
-                  {/* <CommitWrap>
-                    {git.commits.map(each => {
-                      return (
-                        <CenteredIcon><Icon icon ={each.icon}/>{each.text}</CenteredIcon>
-                      )
-                    })}
-                  </CommitWrap> */}
                     {git.colorBar.map(bar => {
                       return (
                         <ColorBarWrap 

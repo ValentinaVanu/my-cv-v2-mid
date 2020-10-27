@@ -314,6 +314,12 @@
           }
         ],
         "moreDetails": {
+          "percentage":[
+            "HTML 4.6%",
+            "CSS 6.8%",
+            "SCSS 9.1%",
+            "JavaScript 79.5%"
+          ],
           "commits" : [
             {
               "icon": "commits",
@@ -348,6 +354,11 @@
           }
         ],
         "moreDetails": {
+          "percentage":[
+            "HTML 41.2%",
+            "CSS 9.2%",
+            "JavaScript 49.6%"
+          ],
           "commits" : [
             {
               "icon": "commits",
@@ -390,6 +401,13 @@
           }
         ],
         "moreDetails": {
+          "percentage":[
+            "HTML 25.1%",
+            "CSS 5.1%",
+            "SCSS 26.9%",
+            "Pug 11.4%",
+            "JavaScript 31.5%"
+          ],
           "commits" : [
             {
               "icon": "commits",
