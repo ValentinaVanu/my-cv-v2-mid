@@ -431,5 +431,8 @@
         }
       }
     ]
+  },
+  "portfolio": {
+    "sectionTitle": "Portfolio"
   }
 }
