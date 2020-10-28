@@ -37,15 +37,23 @@ const OpenSource = () => {
     gitList = []
   } = openSource
 
+  // const toggleInfo = (title) => {
+  //   updateOpenSource({
+  //     ...openSource,
+  //     gitList: openSource.gitList.map(item => ({
+  //       ...item,
+  //       showMoreDetails: item.title === title 
+  //     }))
+  //   })
+  // }
+
   const toggleInfo = (title) => {
     updateOpenSource({
       ...openSource,
-      gitList: openSource.gitList.map(item => ({
-        ...item,
-        showMoreDetails: item.title === title
-      }))
+      gitList: openSource.gitList.map(item => ({...item, showMoreDetails: item.title !== title ? false : item.showMoreDetails ? false : true}))
     })
   }
+  
   return (
     <>
       <Column>
@@ -122,7 +130,9 @@ const OpenSource = () => {
                       })}
                 </StatsWrapper>
                 <PinkWrap>
-                  <EachPink onClick={()=> toggleInfo(git.title)}><Icon icon="info"/> </EachPink>
+                  <EachPink onClick={()=> toggleInfo(git.title)}>
+                    <Icon icon="info"/>
+                  </EachPink>
                   <EachPink><Icon icon="github"/> </EachPink>
                   <EachPink><Icon icon="youtube"/> </EachPink>
                 </PinkWrap>
