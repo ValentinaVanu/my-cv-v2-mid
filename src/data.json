@@ -433,6 +433,28 @@
     ]
   },
   "portfolio": {
-    "sectionTitle": "Portfolio"
+    "sectionTitle": "Portfolio",
+    "recent": {
+      "recentTitle": "Recent",
+      "recentList": {
+        "reactResume": {
+          "title": "React Resume",
+          "languages": "HTML, CSS, Git, Sass, JSON, React, React Hooks, JavaScript"
+        },
+        "juniorResume": {
+          "title": "Pug Resume",
+          "languages":"HTML, CSS, Git, Pug, Sass, Json"
+        }
+      }
+    },
+    "older":{
+      "olderTitle": "Older",
+      "olderList":{
+        "pugStarter": {
+          "title": "Pug Starter",
+          "languages":"HTML, CSS, Git, Pug"
+        }
+      }
+    }
   }
 }

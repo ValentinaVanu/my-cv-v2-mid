@@ -2,6 +2,12 @@ import React, { useEffect, useState } from 'react'
 import { get } from 'axios'
 import { Column } from '../column'
 import { SectionTitle } from '../section-title'
+import { Button } from '../button'
+import CvJunior from '../../assets/image/portfolio-img/cv-v2-junior.png'
+import CvStarter from '../../assets/image/portfolio-img/cv-v2-starter.png'
+import PugStarter from '../../assets/image/portfolio-img/pug-starter.png'
+
+const imgList = [CvJunior, CvStarter, PugStarter]
 
 const Portfolio = () => {
   const [portfolio, updatePortfolio] = useState({})
@@ -31,6 +37,18 @@ const Portfolio = () => {
           {sectionTitle}
         </SectionTitle>
       </Column>
+      <Column height={10} />
+      <Column height={10} />
+      <Column>
+      </Column>
+      <Column height={10} />
+      <Column display="flex">
+        <Button 
+          icon="arrow-down"
+          background="green"
+        />
+      </Column>
+      <Column height={10} />
     </>
   )
 }
