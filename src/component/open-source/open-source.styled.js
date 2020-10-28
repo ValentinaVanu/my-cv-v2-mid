@@ -2,8 +2,27 @@ import styled from 'styled-components'
 import { getBackgroundValue } from '../button/button.style'
 
 
+export const LinkWrap = styled.div `
+  background-color: #1875F0;
+  color: #fff;
+  padding: 10px;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 20px;
+  border-radius: 20px;
+`
 
-export const PercentWrap =styled.div `
+export const DescriptionWrap = styled.div `
+  border-top: 2px solid #808080;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 14px;
+  color: #808080;
+  padding: 22px;
+`
+
+export const PercentWrap = styled.div `
   border-top: 2px solid #808080;
   display: flex;
   flex-direction: column;

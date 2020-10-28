@@ -3,7 +3,7 @@ import get from 'axios';
 import { Column } from '../column';
 import { SectionTitle } from '../section-title';
 import { Button } from '../button';
-import { EachStats, StatsWrapper, StyledTitle, StatsContent, CenteredIcon, GitTitle, GitLanguages, ColorBarWrap, PinkWrap, EachPink, CommitWrap, PercentWrap } from './open-source.styled';
+import { EachStats, StatsWrapper, StyledTitle, StatsContent, CenteredIcon, GitTitle, GitLanguages, ColorBarWrap, PinkWrap, EachPink, CommitWrap, PercentWrap, DescriptionWrap, LinkWrap } from './open-source.styled';
 import { Icon } from '../icomoon';
 
 const OpenSource = () => {
@@ -119,6 +119,14 @@ const OpenSource = () => {
                       })
                       }
                     </CommitWrap>
+                    <DescriptionWrap>
+                      {git.moreDetails.description}
+                    </DescriptionWrap>
+                      <DescriptionWrap>
+                        <LinkWrap>
+                          <Icon icon="github"/>{git.moreDetails.link}
+                        </LinkWrap>
+                        </DescriptionWrap>
                   </div>}
                     {git.colorBar.map(bar => {
                       return (
