@@ -475,6 +475,23 @@
     ]
   },
   "reviews": {
-    "sectionTitle" : " Reviews"
+    "sectionTitle" : " Reviews",
+    "reviewList":[
+      {
+        "name": "Chloe White",
+        "date":"15 October 2018 ",
+        "text":"Great content , these things you will learn will change your life for better"
+      },
+      {
+        "name": "Chloe Blue",
+        "date":"October 10 at 4:49 AM",
+        "text":"Very Good It"
+      },
+      {
+        "name": "Chloe Cute",
+        "date":"September 28 at 6:44 PM",
+        "text":"Join our group and become a professional Front Web Developer in less than 5 months !"
+      }
+    ]
   }
 }
