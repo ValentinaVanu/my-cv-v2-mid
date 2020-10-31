@@ -452,6 +452,26 @@
     }]
   },
   "recommendations": {
-    "sectionTitle": "Recommendations"
+    "sectionTitle": "Recommendations",
+    "recommendationsList":[
+      {
+        "avatar":"Marian",
+        "name": "Marian Zburlea",
+        "jobTitle":"Career Mentor",
+        "recomText": "Valentina is a highly creative and easy-going person to work with. She is multi-skilled, has a vast knowledge in web development in general and frontend development in particular with jaw-dropping CSS skills"
+      },
+      {
+        "avatar":"chloe",
+        "name": "Chloe",
+        "jobTitle":"Senior Web Developer",
+        "recomText":"Valentina is proactive, self motivated, intelligent, keen to learn new technologies, always updating her knowledge/skills and keen to share her vast knowledge with any and all. It was a pleasure working with her. Valentina makes a great addition to any team! "
+      },
+      {
+        "avatar":"Chloe2",
+        "name": "Alan Wright",
+        "jobTitle":"Senior Project Manager at Newton Investment Management",
+        "recomText":"Valentina has done a fantastic job on UI development while working for me on a Digital Transformation Programme of work at Direct Line. Her work rate is high and output is of equally high quality. She has proved to be a great enabler in assisting me to deliver the Programme of work that I have been overseeing."
+      }
+    ]
   }
 }
