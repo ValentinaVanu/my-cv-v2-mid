@@ -469,9 +469,12 @@
       {
         "avatar":"Chloe2",
         "name": "Alan Wright",
-        "jobTitle":"Senior Project Manager at Newton Investment Management",
+        "jobTitle":"Senior Project Manager",
         "recomText":"Valentina has done a fantastic job on UI development while working for me on a Digital Transformation Programme of work at Direct Line. Her work rate is high and output is of equally high quality. She has proved to be a great enabler in assisting me to deliver the Programme of work that I have been overseeing."
       }
     ]
+  },
+  "reviews": {
+    "sectionTitle" : " Reviews"
   }
 }
