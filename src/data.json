@@ -493,5 +493,17 @@
         "text":"Join our group and become a professional Front Web Developer in less than 5 months !"
       }
     ]
+  },
+  "menu" : {
+    "menuList": [
+      "Welcome",
+      "Let's connect",
+      "Skills",
+      "Experience",
+      "Open Source",
+      "Portfolio",
+      "Recommendations",
+      "Reviews"
+    ]
   }
 }

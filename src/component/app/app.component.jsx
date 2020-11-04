@@ -1,6 +1,7 @@
 import React from 'react'
 import { Connect } from '../connect'
 import { Experience } from '../experience'
+import { Menu } from '../menu'
 import { OpenSource } from '../open-source/open-source.component'
 import { Portfolio } from '../portfolio'
 import { Recommendations } from '../recommendations/recommendations.component'
@@ -21,6 +22,7 @@ const App = () => {
       <Portfolio />
       <Recommendations />
       <Reviews />
+      <Menu />
     </StyledAppWrapper>
   )
 }
