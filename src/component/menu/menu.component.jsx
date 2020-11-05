@@ -26,17 +26,26 @@ const Menu = () => {
     menuList = []
   } = menu
 
+  const handleClick = menuList  => {
+    updateMenu(menuList)
+  }
+
+  const closeMenu = () => {
+    updateMenu([])
+  }
+
   return (
     <>
       <MenuWrap>
-        <BurgerMenu>
+        <BurgerMenu onClick={() => {handleClick(menuList)}}>
           <Icon  icon="menu"/>
           <MenuListWrap>
             {menuList.map((section, key) => {
               return (
                 <div key={key}>{section}</div>
-              )
-            })}
+                )
+              })}
+              <div><Icon icon="cross"/> Close Menu</div>
           </MenuListWrap>
         </BurgerMenu>
 
