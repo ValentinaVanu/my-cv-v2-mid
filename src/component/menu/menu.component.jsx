@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { get } from 'axios'
 import { Icon } from '../icomoon'
-import { MenuWrap, BurgerMenu, MenuListWrap } from './menu.style'
+import {  BurgerMenu, MenuListWrap } from './menu.style'
 
 
 const Menu = () => {
@@ -26,30 +26,27 @@ const Menu = () => {
     menuList = []
   } = menu
 
-  const handleClick = menuList  => {
+  const handleClick = menuList => {
     updateMenu(menuList)
   }
 
   const closeMenu = () => {
-    updateMenu([])
+    updateMenu({})
   }
 
   return (
     <>
-      <MenuWrap>
-        <BurgerMenu onClick={() => {handleClick(menuList)}}>
-          <Icon  icon="menu"/>
-          <MenuListWrap>
-            {menuList.map((section, key) => {
-              return (
-                <div key={key}>{section}</div>
-                )
-              })}
-              <div><Icon icon="cross"/> Close Menu</div>
-          </MenuListWrap>
-        </BurgerMenu>
-
-      </MenuWrap>
+      <BurgerMenu>
+        <Icon onClick={() => {handleClick(menu)}} icon="menu"/>
+        <MenuListWrap>
+          {menuList.map((section, key) => {
+            return (
+              <div key={key}>{section}</div>
+              )
+            })}
+            <div onClick={closeMenu}><Icon  icon="cross"/><div> Close Menu</div></div>
+        </MenuListWrap>
+      </BurgerMenu>
     </>
   )
 }

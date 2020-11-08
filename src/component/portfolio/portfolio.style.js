@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 
 
-
+  
 
 export const ProjectImage = styled.div `
   border: 2px solid #707070 ;
