@@ -25,27 +25,32 @@ const Menu = () => {
   const {
     menuList = []
   } = menu
+  console.log(menuList)
+  debugger
 
   const handleClick = menuList => {
     updateMenu(menuList)
   }
-
+  
   const closeMenu = () => {
     updateMenu({})
   }
-
+  console.log(closeMenu)
   return (
     <>
-      <BurgerMenu>
-        <Icon onClick={() => {handleClick(menu)}} icon="menu"/>
-        <MenuListWrap>
+      <BurgerMenu onClick={() => handleClick(menuList)}>
+        <Icon icon="menu"/>
+        {menu.hasOwnProperty('Welcome') && <MenuListWrap>
           {menuList.map((section, key) => {
             return (
               <div key={key}>{section}</div>
               )
             })}
-            <div onClick={closeMenu}><Icon  icon="cross"/><div> Close Menu</div></div>
-        </MenuListWrap>
+            <div >
+              <div> Close Menu</div>
+              <Icon handleClose={closeMenu} icon="cross"/>
+            </div>
+        </MenuListWrap>}
       </BurgerMenu>
     </>
   )
