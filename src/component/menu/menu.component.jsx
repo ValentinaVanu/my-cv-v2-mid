@@ -12,7 +12,10 @@ const Menu = () => {
       try {
         const getResult = async() => {
           const { data } = await get ('http://localhost:4567/menu')
-          updateMenu(data)
+          updateMenu({
+            ...data,
+            showMenu: false
+          })
         }
         getResult()
       } catch (error) {
@@ -23,32 +26,40 @@ const Menu = () => {
   )
 
   const {
-    menuList = []
+    menuList = [],
+    showMenu
   } = menu
   console.log(menuList)
-  debugger
 
-  const handleClick = menuList => {
-    updateMenu(menuList)
+  const handleClick = () => {
+    updateMenu({
+      menuList,
+      showMenu: true
+    })
+
   }
   
   const closeMenu = () => {
-    updateMenu({})
+    console.log('closeMenu')
+    updateMenu({
+      menuList,
+      showMenu: false
+    })
   }
-  console.log(closeMenu)
+
   return (
     <>
-      <BurgerMenu onClick={() => handleClick(menuList)}>
-        <Icon icon="menu"/>
-        {menu.hasOwnProperty('Welcome') && <MenuListWrap>
+      <BurgerMenu >
+        <Icon onClick={handleClick} icon="menu"/>
+        {showMenu && <MenuListWrap>
           {menuList.map((section, key) => {
             return (
               <div key={key}>{section}</div>
               )
             })}
-            <div >
+            <div onClick={closeMenu}>
               <div> Close Menu</div>
-              <Icon handleClose={closeMenu} icon="cross"/>
+              <Icon icon="cross"/>
             </div>
         </MenuListWrap>}
       </BurgerMenu>
