@@ -1,6 +1,11 @@
 import styled from 'styled-components'
 
 
+
+export const StyledBurger = styled.div `
+  padding: 5px;
+`
+
 export const CloseSection = styled.div `
   display: flex;
   cursor: pointer;
@@ -10,7 +15,6 @@ export const CloseSection = styled.div `
     color: #fff;
     cursor: pointer;
   }
-
 `
 
 export const StyleMenuIcon = styled.div `
