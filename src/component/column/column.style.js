@@ -16,4 +16,5 @@ export const StyledColumn = styled.div `
       // false
       :  'auto'
   };
+
 `

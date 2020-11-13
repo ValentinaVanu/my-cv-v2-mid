@@ -27,4 +27,11 @@ export const StyledImg = styled.div `
     right: 0px;
   }
 
+  @media only screen and (min-width: 600px) {
+    display: grid;
+    grid-column: 1/4;
+  }
+
 `
+
+

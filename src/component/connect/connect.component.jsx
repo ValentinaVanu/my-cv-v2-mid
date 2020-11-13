@@ -42,13 +42,11 @@ const Connect = () => {
       <Column height={10} />
       <Column height={10} />
       <Column height={10} />
-      <Column display="flex">
-        <ConnectImg />
-      </Column>
+      <ConnectImg />
       <Column height={10} />
       <Column height={10} />
       <Column height={10} />
-      <Column span={1}>
+      <Column>
         <ButtonWrapper>
           {Object.values((socialList || {})).map(social => {
             return <SocialButton isSelected={social.icon === selected.icon} key={social.icon}  onClick={() =>{ handleClick(social)} }
