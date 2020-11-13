@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 
 export const StyledBurger = styled.div `
-  padding: 5px;
+  padding: 5px 8px;
 `
 
 export const CloseSection = styled.div `

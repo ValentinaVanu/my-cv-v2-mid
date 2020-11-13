@@ -29,7 +29,6 @@ const Menu = () => {
     menuList = [],
     showMenu
   } = menu
-  console.log(menuList)
 
   const handleClick = () => {
     updateMenu({
@@ -40,7 +39,6 @@ const Menu = () => {
   }
   
   const closeMenu = () => {
-    console.log('closeMenu')
     updateMenu({
       menuList,
       showMenu: false
