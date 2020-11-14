@@ -41,34 +41,38 @@ const Welcome = () => {
         <SectionTitle>Welcome to My CV</SectionTitle>
       </Column>
       <Column height={10} />
-      <Column>
-        <WS.StyledH1>{person && person.firstName} {person && person.lastName} </WS.StyledH1>
-      </Column>
-      <Column>
-        <WS.StyledH2>{jobTitle}</WS.StyledH2>
-      </Column>
-      <Column>
-        <WS.StyledH3>{sectionTitle}</WS.StyledH3>
-      </Column>
-      <Column>
-        <WS.StyledDiv>
-          <WS.StyledP>{sectionDescription}</WS.StyledP>
-        </WS.StyledDiv>
-      </Column>
-      <Column height={10} />
-      <Column display="flex">
-        <Button
-        icon="download"
-        label="Download CV">
-        </Button>
-      </Column>
-      <Column height={10} />
-      <Column display="flex">
-        <Button 
-          icon="arrow-down"
-          background="green"
-        />
-      </Column>
+      {/* <Column> */}
+        <WS.DesktopWrap>
+          <Column>
+              <WS.StyledH1>{person && person.firstName} {person && person.lastName} </WS.StyledH1>
+            </Column>
+            <Column>
+              <WS.StyledH2>{jobTitle}</WS.StyledH2>
+            </Column>
+            <Column>
+              <WS.StyledH3>{sectionTitle}</WS.StyledH3>
+            </Column>
+            <Column>
+              <WS.StyledDiv>
+                <WS.StyledP>{sectionDescription}</WS.StyledP>
+              </WS.StyledDiv>
+            </Column>
+            <Column height={10} />
+            <Column display="flex">
+              <Button
+              icon="download"
+              label="Download CV">
+              </Button>
+            </Column>
+            <Column height={10} />
+            <Column display="flex">
+              <Button 
+                icon="arrow-down"
+                background="green"
+              />
+            </Column>
+        </WS.DesktopWrap>
+      {/* </Column> */}
       <Column height={10} />
     </>
   )
