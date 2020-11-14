@@ -2,7 +2,13 @@ import styled from 'styled-components'
 
 
 
-  
+export const EachProjectWrap = styled.div`
+  @media only screen and (min-width: 600px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+}
+`
 
 export const ProjectImage = styled.div `
   border: 2px solid #707070 ;
