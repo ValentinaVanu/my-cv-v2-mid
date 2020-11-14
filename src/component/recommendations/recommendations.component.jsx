@@ -3,7 +3,7 @@ import { Column } from '../column'
 import { SectionTitle } from '../section-title'
 import { get } from 'axios'
 import { Button } from '../button'
-import { Avatar, EachContact, EachRecom, RecommText, RecomContact, RecommName, RecommJob } from './recommendations.styled'
+import { Avatar, EachContact, EachRecom, RecommText, RecomContact, RecommName, RecommJob, RecommWrap } from './recommendations.styled'
 import Chloe from '../../assets/image/recommendations/chloe.JPG'
 import ChloeSecond from '../../assets/image/recommendations/chloe2.jpg'
 import Marian from '../../assets/image/recommendations/marian.jpg'
@@ -41,25 +41,27 @@ const Recommendations = () => {
       <Column height={10} />
       <Column height={10} />
       <Column>
-        {recommendationsList.map((each, key) => {
-          return (
-            <div>
-              <EachRecom>
-                <EachContact>
-                  <Avatar src={avatarList[key]} alt='img' width="50"/>
-                  <RecomContact>
-                    <RecommName>{each.name}</RecommName>
-                    <RecommJob>{each.jobTitle}</RecommJob>
-                  </RecomContact>
-                </EachContact>
-                <RecommText>{each.recomText}</RecommText>
-              </EachRecom>
-              <Column height={10} />
-              <Column height={10} />
-              <Column height={10} />
-            </div>
-            )
-        })}
+        <RecommWrap>
+          {recommendationsList.map((each, key) => {
+            return (
+              <div>
+                <EachRecom>
+                  <EachContact>
+                    <Avatar src={avatarList[key]} alt='img' width="50"/>
+                    <RecomContact>
+                      <RecommName>{each.name}</RecommName>
+                      <RecommJob>{each.jobTitle}</RecommJob>
+                    </RecomContact>
+                  </EachContact>
+                  <RecommText>{each.recomText}</RecommText>
+                </EachRecom>
+                <Column height={10} />
+                <Column height={10} />
+                <Column height={10} />
+              </div>
+              )
+          })}
+        </RecommWrap>
       </Column>
       <Column height={10} />
       <Column height={10} />

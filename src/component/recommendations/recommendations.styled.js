@@ -1,6 +1,12 @@
 import styled from 'styled-components'
 
 
+export const RecommWrap = styled.div `
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+`
+
 export const RecommJob = styled.div `
   font-size: 14px;
   color: #808080;

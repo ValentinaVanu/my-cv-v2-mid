@@ -4,7 +4,7 @@ import { Column } from '../column'
 import { SectionTitle } from '../section-title'
 import { Button } from '../button'
 import { Avatar, EachContact, RecomContact, RecommText } from '../recommendations/recommendations.styled'
-import { ReviewDate, ReviewName } from './reviews.styled'
+import { ReviewDate, ReviewName, ReviewWrap } from './reviews.styled'
 import Chloe from '../../assets/image/recommendations/chloe.JPG'
 import ChloeSecond from '../../assets/image/recommendations/chloe2.jpg'
 import ChloeThird from '../../assets/image/recommendations/chloe3.jpg'
@@ -41,23 +41,25 @@ const Reviews = () => {
       <Column height={10} />
       <Column height={10} />
       <Column>
-        {reviewList.map((review, key )=> {
-          return (
-            <div>
-              <EachContact>
-                <Avatar src={reviewImgList[key]} alt="img" width="50" />
-                <RecomContact>
-                  <ReviewName>{review.name}</ReviewName>
-                  <ReviewDate>{review.date}</ReviewDate>
-                </RecomContact>
-              </EachContact>
-              <RecommText>{review.text}</RecommText>
-              <Column height={10} />
-              <Column height={10} />
-              <Column height={10} />
-            </div>
-          )
-        })}
+        <ReviewWrap>
+          {reviewList.map((review, key )=> {
+            return (
+              <div>
+                <EachContact>
+                  <Avatar src={reviewImgList[key]} alt="img" width="50" />
+                  <RecomContact>
+                    <ReviewName>{review.name}</ReviewName>
+                    <ReviewDate>{review.date}</ReviewDate>
+                  </RecomContact>
+                </EachContact>
+                <RecommText>{review.text}</RecommText>
+                <Column height={10} />
+                <Column height={10} />
+                <Column height={10} />
+              </div>
+            )
+          })}
+        </ReviewWrap>
       </Column>
       <Column height={10} />
       <Column height={10} />
