@@ -30,7 +30,7 @@ export const StyledImg = styled.div `
   }
 
   @media only screen and (min-width: 600px) {
-    grid-column: 1/4;
+    grid-column: 1/3;
     margin-bottom: 0px;
   }
 

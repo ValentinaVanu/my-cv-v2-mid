@@ -36,11 +36,19 @@ export const MenuListWrap = styled.div `
 `
 export const BurgerMenu = styled.div `
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 80px;
+  right: 40px;
   background-color: #fff;
   border: 2px solid #707070;
   box-shadow: 0 2px 6px rgba(0,0,0,0.16);
   border-radius: 6px;
+  cursor: pointer;
 
+  
+  @media only screen and (min-width: 992px) {
+    padding: 20px;
+    bottom: 150px;
+    right: 50px;
+    opacity: 0.8;
+}
 `
