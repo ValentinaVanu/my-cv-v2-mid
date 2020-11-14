@@ -1,5 +1,16 @@
 import styled from 'styled-components'
 
+
+
+
+export const LegendListGrid = styled.div`
+  @media only screen and (min-width: 600px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+`
+
 export const Description = styled.div `
   padding: 20px;
   border-radius: 6px;
@@ -26,6 +37,7 @@ export const LegendList = styled.div `
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
 
 `
 
