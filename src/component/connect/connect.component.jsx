@@ -4,7 +4,7 @@ import { Column } from '../column';
 import { ConnectImg } from '../connect-img';
 import { SectionTitle } from '../section-title';
 import { get } from 'axios';
-import { ButtonWrapper } from './connect.style';
+import { ButtonWrapper, ConnectWrap } from './connect.style';
 import { SocialButton } from '../connect-social'
 import { SocialWrapper } from '../connect-info';
 
@@ -42,17 +42,17 @@ const Connect = () => {
       <Column height={10} />
       <Column height={10} />
       <Column height={10} />
-      <ConnectImg />
-      <Column height={10} />
-      <Column height={10} />
-      <Column height={10} />
       <Column>
-        <ButtonWrapper>
-          {Object.values((socialList || {})).map(social => {
-            return <SocialButton isSelected={social.icon === selected.icon} key={social.icon}  onClick={() =>{ handleClick(social)} }
-             icon={social.icon} />
-          } ) }
-        </ButtonWrapper>
+      <ConnectWrap>
+        <ConnectImg />
+
+          <ButtonWrapper>
+            {Object.values((socialList || {})).map(social => {
+              return <SocialButton isSelected={social.icon === selected.icon} key={social.icon}  onClick={() =>{ handleClick(social)} }
+              icon={social.icon} />
+            } ) }
+          </ButtonWrapper>
+      </ConnectWrap>
       </Column>
       <Column height={10} />
       <Column>

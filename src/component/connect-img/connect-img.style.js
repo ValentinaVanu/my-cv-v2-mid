@@ -14,6 +14,7 @@ export const StyledImg = styled.div `
   height: 100px; */
   position: relative;
   border: 6px solid #fff;
+  margin-bottom: 40px;
 
   &::after {
     content: "";
@@ -25,11 +26,12 @@ export const StyledImg = styled.div `
     left: 0px;
     bottom: 0px;
     right: 0px;
+
   }
 
   @media only screen and (min-width: 600px) {
-    display: grid;
     grid-column: 1/4;
+    margin-bottom: 0px;
   }
 
 `

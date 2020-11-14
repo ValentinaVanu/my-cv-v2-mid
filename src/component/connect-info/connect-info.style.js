@@ -8,6 +8,10 @@ export const StyledInfoWrap = styled.div `
   border-radius: 6px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
   color: #808080;
+
+  @media only screen and (min-width: 600px){
+    padding: 20px 80px 20px 80px;
+  }
 `
 export const CrossButton = styled.div `
   background-color: #1875F0;
