@@ -4,7 +4,7 @@ import { get } from 'axios';
 import { Column } from '../column';
 import { SectionTitle } from '../section-title';
 import { Button } from '../button';
-import { LegendList, StyledIcon, StyledLabel, StyledLi, SkillTitle, StyledNumber, Description } from './skill.style';
+import { LegendList, StyledIcon, StyledLabel, StyledLi, SkillTitle, StyledNumber, Description, LegendListGrid } from './skill.style';
 import { Icon } from '../icomoon';
 import { SkillList } from '../skillList';
 
@@ -71,18 +71,20 @@ const Skill = () => {
       <Column height={10} />
       <Column height={10} />
       <Column>
-          <LegendList>
-            {itemList.map(item => {
-              return (
-                // <StyledUl key={item.icon}>
-                  <StyledLi key={item.icon}>
-                    <StyledIcon >
-                      <Icon color={item.color} icon={item.icon} />
-                    </StyledIcon>< StyledLabel>{item.label}</ StyledLabel><StyledNumber>{item.number}</StyledNumber>
-                  </StyledLi>
-                // </StyledUl>
-              )})}
-          </LegendList>
+          <LegendListGrid>
+            <LegendList>
+              {itemList.map(item => {
+                return (
+                  // <StyledUl key={item.icon}>
+                    <StyledLi key={item.icon}>
+                      <StyledIcon >
+                        <Icon color={item.color} icon={item.icon} />
+                      </StyledIcon>< StyledLabel>{item.label}</ StyledLabel><StyledNumber>{item.number}</StyledNumber>
+                    </StyledLi>
+                  // </StyledUl>
+                )})}
+            </LegendList>
+          </LegendListGrid>
       </Column>
       <Column height={10} />
       <Column height={10} />
