@@ -7,6 +7,7 @@ import { Button } from '../button';
 import { LegendList, StyledIcon, StyledLabel, StyledLi, SkillTitle, StyledNumber, Description, LegendListGrid } from './skill.style';
 import { Icon } from '../icomoon';
 import { SkillList } from '../skillList';
+import { DesktopWrap } from '../welcome/welcome.style';
 
 const Skill = () => {
   const [skill, updateSkill] = useState({
@@ -70,79 +71,81 @@ const Skill = () => {
       </Column>
       <Column height={10} />
       <Column height={10} />
-      <Column>
-          <LegendListGrid>
-            <LegendList>
-              {itemList.map(item => {
-                return (
-                  // <StyledUl key={item.icon}>
-                    <StyledLi key={item.icon}>
-                      <StyledIcon >
-                        <Icon color={item.color} icon={item.icon} />
-                      </StyledIcon>< StyledLabel>{item.label}</ StyledLabel><StyledNumber>{item.number}</StyledNumber>
-                    </StyledLi>
-                  // </StyledUl>
-                )})}
-            </LegendList>
-          </LegendListGrid>
-      </Column>
-      <Column height={10} />
-      <Column height={10} />
-      <Column>
-        <SkillTitle>{frontTitle}</SkillTitle>
-      </Column>
-      <Column height={10} />
-      <Column>
-        <div>
-          {skillList.map(skill => {
-            return (
-            <SkillList key={skill.label} background={skill.color} label={skill.label} />
-            )
-          })}
-        </div>
-      </Column>
-      <Column height={10} />
-      <Column height={10} />
-      <Column>
-        <SkillTitle>{backTitle}</SkillTitle>
-      </Column>
-      <Column height={10} />
-      <Column>
+      <DesktopWrap>
+        <Column>
+            <LegendListGrid>
+              <LegendList>
+                {itemList.map(item => {
+                  return (
+                    // <StyledUl key={item.icon}>
+                      <StyledLi key={item.icon}>
+                        <StyledIcon >
+                          <Icon color={item.color} icon={item.icon} />
+                        </StyledIcon>< StyledLabel>{item.label}</ StyledLabel><StyledNumber>{item.number}</StyledNumber>
+                      </StyledLi>
+                    // </StyledUl>
+                  )})}
+              </LegendList>
+            </LegendListGrid>
+        </Column>
+        <Column height={10} />
+        <Column height={10} />
+        <Column>
+          <SkillTitle>{frontTitle}</SkillTitle>
+        </Column>
+        <Column height={10} />
+        <Column>
           <div>
-            {backSkillList.map(back => {
+            {skillList.map(skill => {
               return (
-              <SkillList key={back.label} background={back.color} label={back.label} />
-            )})}
+              <SkillList key={skill.label} background={skill.color} label={skill.label} />
+              )
+            })}
           </div>
-      </Column>
-      <Column height={10} />
-      <Column>
-        <SkillTitle>{othersTitle}</SkillTitle>
-      </Column>
-      <Column height={10} />
-      <Column>
-        {
-          otherSkillList.map(other => {
-            return (
-              <SkillList key={other.label} background={other.color} label={other.label}/>
-            )
-          })
-        }
-      </Column>
-      <Column height={10} />
-      <Column>
-        <Description>
-          {description}
-        </Description>
-      </Column>
-      <Column height={10} />
-      <Column height={10} />
-      <Column display="flex">
-        <Button 
-          icon="arrow-down"
-          background="green"
-        />
-      </Column>
+        </Column>
+        <Column height={10} />
+        <Column height={10} />
+        <Column>
+          <SkillTitle>{backTitle}</SkillTitle>
+        </Column>
+        <Column height={10} />
+        <Column>
+            <div>
+              {backSkillList.map(back => {
+                return (
+                <SkillList key={back.label} background={back.color} label={back.label} />
+              )})}
+            </div>
+        </Column>
+        <Column height={10} />
+        <Column>
+          <SkillTitle>{othersTitle}</SkillTitle>
+        </Column>
+        <Column height={10} />
+        <Column>
+          {
+            otherSkillList.map(other => {
+              return (
+                <SkillList key={other.label} background={other.color} label={other.label}/>
+              )
+            })
+          }
+        </Column>
+        <Column height={10} />
+        <Column>
+          <Description>
+            {description}
+          </Description>
+        </Column>
+        <Column height={10} />
+        <Column height={10} />
+        <Column display="flex">
+          <Button 
+            icon="arrow-down"
+            background="green"
+          />
+        </Column>
+      </DesktopWrap>
       <Column height={10} />
 
     </>

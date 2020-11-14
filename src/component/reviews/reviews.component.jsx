@@ -8,6 +8,7 @@ import { ReviewDate, ReviewName, ReviewWrap } from './reviews.styled'
 import Chloe from '../../assets/image/recommendations/chloe.JPG'
 import ChloeSecond from '../../assets/image/recommendations/chloe2.jpg'
 import ChloeThird from '../../assets/image/recommendations/chloe3.jpg'
+import { DesktopWrap } from '../welcome/welcome.style'
 
 
 const reviewImgList = [Chloe, ChloeSecond, ChloeThird]
@@ -40,35 +41,37 @@ const Reviews = () => {
       </Column>
       <Column height={10} />
       <Column height={10} />
-      <Column>
-        <ReviewWrap>
-          {reviewList.map((review, key )=> {
-            return (
-              <div>
-                <EachContact>
-                  <Avatar src={reviewImgList[key]} alt="img" width="50" />
-                  <RecomContact>
-                    <ReviewName>{review.name}</ReviewName>
-                    <ReviewDate>{review.date}</ReviewDate>
-                  </RecomContact>
-                </EachContact>
-                <RecommText>{review.text}</RecommText>
-                <Column height={10} />
-                <Column height={10} />
-                <Column height={10} />
-              </div>
-            )
-          })}
-        </ReviewWrap>
-      </Column>
-      <Column height={10} />
-      <Column height={10} />
-      <Column display="flex">
-        <Button 
-          icon="arrow-down"
-          background="green"
-        />
-      </Column>
+      <DesktopWrap>
+        <Column>
+          <ReviewWrap>
+            {reviewList.map((review, key )=> {
+              return (
+                <div>
+                  <EachContact>
+                    <Avatar src={reviewImgList[key]} alt="img" width="50" />
+                    <RecomContact>
+                      <ReviewName>{review.name}</ReviewName>
+                      <ReviewDate>{review.date}</ReviewDate>
+                    </RecomContact>
+                  </EachContact>
+                  <RecommText>{review.text}</RecommText>
+                  <Column height={10} />
+                  <Column height={10} />
+                  <Column height={10} />
+                </div>
+              )
+            })}
+          </ReviewWrap>
+        </Column>
+        <Column height={10} />
+        <Column height={10} />
+        <Column display="flex">
+          <Button 
+            icon="arrow-down"
+            background="green"
+          />
+        </Column>
+      </DesktopWrap>
       <Column height={10} />
     </>
   )

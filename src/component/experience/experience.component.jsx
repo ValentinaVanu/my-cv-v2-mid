@@ -8,6 +8,7 @@ import { Chevron } from '../chevron'
 import BitBeePng from '../../assets/image/company-logo/bitbee.png'
 import SandlinePng from '../../assets/image/company-logo/sandline.png'
 import HarbourMedPng from '../../assets/image/company-logo/harbourmed.png'
+import { DesktopWrap } from '../welcome/welcome.style';
 
 const imageList = [BitBeePng, SandlinePng, HarbourMedPng]
 
@@ -48,43 +49,45 @@ const Experience = () => {
     <Column height={10} />
     <Column height={10} />
     <Column height={10} />
-    <Column>
-      <JobWrapper >
-        {jobList.map(({ companyName, jobTitle, startDate, endDate, moreInfoList, isToggled = false }, key) => {
-          return (
-            <div>
-              <EachJob key={companyName}>
-                <JobPic><img src={imageList[key]} alt='img' width="50" /></JobPic>
-                <JobTitle>{jobTitle}</JobTitle>
-                <Chevron onClick={() => toggleThis(key) } />
-                <CompanyName>{companyName}</CompanyName>
-              </EachJob>
-              {isToggled && (
-                <div>
-                  <MoreInfo>
-                    <JobDate>{startDate} - {endDate}</JobDate>
-                    <Info>
-                      {moreInfoList.map(moreInfo => {
-                        return (
-                          <div>{moreInfo}</div>
-                        )
-                      })}
-                    </Info>
-                  </MoreInfo>
-                </div>
-              )}
-            </div>
-              )
-            })}
-      </JobWrapper>
-    </Column>
-    <Column height={10} />
-      <Column display="flex">
-        <Button 
-          icon="arrow-down"
-          background="green"
-        />
+    <DesktopWrap>
+      <Column>
+        <JobWrapper >
+          {jobList.map(({ companyName, jobTitle, startDate, endDate, moreInfoList, isToggled = false }, key) => {
+            return (
+              <div>
+                <EachJob key={companyName}>
+                  <JobPic><img src={imageList[key]} alt='img' width="50" /></JobPic>
+                  <JobTitle>{jobTitle}</JobTitle>
+                  <Chevron onClick={() => toggleThis(key) } />
+                  <CompanyName>{companyName}</CompanyName>
+                </EachJob>
+                {isToggled && (
+                  <div>
+                    <MoreInfo>
+                      <JobDate>{startDate} - {endDate}</JobDate>
+                      <Info>
+                        {moreInfoList.map(moreInfo => {
+                          return (
+                            <div>{moreInfo}</div>
+                          )
+                        })}
+                      </Info>
+                    </MoreInfo>
+                  </div>
+                )}
+              </div>
+                )
+              })}
+        </JobWrapper>
       </Column>
+      <Column height={10} />
+        <Column display="flex">
+          <Button 
+            icon="arrow-down"
+            background="green"
+          />
+        </Column>
+    </DesktopWrap>
       <Column height={10} />
 
     </>

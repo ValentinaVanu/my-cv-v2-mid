@@ -5,6 +5,7 @@ import { SectionTitle } from '../section-title';
 import { Button } from '../button';
 import { EachStats, StatsWrapper, StyledTitle, StatsContent, CenteredIcon, GitTitle, GitLanguages, ColorBarWrap, PinkWrap, EachPink, CommitWrap, PercentWrap, DescriptionWrap, LinkWrap } from './open-source.styled';
 import { Icon } from '../icomoon';
+import { DesktopWrap } from '../welcome/welcome.style';
 
 const OpenSource = () => {
   const [openSource, updateOpenSource] = useState ({})
@@ -64,105 +65,107 @@ const OpenSource = () => {
       <Column>
         <StyledTitle>{statsTitle}</StyledTitle>
       </Column>
-      <Column>
-        <StatsWrapper>
-          {statsList.map(stats => {
-            return(
-              <EachStats key={stats.icon}>
-                <CenteredIcon>
-                  <Icon icon={stats.icon} />
-                </CenteredIcon>
-                <div>
-                  {stats.content.map( content => {
-                  return (
-                    <StatsContent>{content}</StatsContent>
-                  )
-                })}
-                </div>
-              </EachStats>
-            )
-          })}
-        </StatsWrapper>
-      <Column height={10} />
-      <Column height={10} />
-      <Column height={10} />
-      <Column>
-          <StyledTitle>{gitTitle}</StyledTitle>
-      </Column>
-      <Column height={10} />
-      <Column height={10} />
-      <Column>
-          <div>
-            {gitList.map( git => {
-              return (
-                <Column>
-                <StatsWrapper key={git.title}>
-                  <GitTitle>{git.title}</GitTitle>
-                  <GitLanguages>{git.languages}</GitLanguages>
-                  {git.showMoreDetails && <div>
-                    <PercentWrap>
-                      {git.moreDetails.percentage.map(percent => {
-                        return (
-                          <div>
-                            <ul>
-                              <li>{percent}</li>
-                            </ul>
-                          </div>
-                        )
-                      })}
-                    </PercentWrap>
-                    <CommitWrap>
-                      {git.moreDetails.commits.map(commit => {
-                        return (
-                          <CenteredIcon><Icon icon={commit.icon}/>{commit.text}</CenteredIcon>
-                        )
-                      })
-                      }
-                    </CommitWrap>
-                    <DescriptionWrap>
-                      {git.moreDetails.description}
-                    </DescriptionWrap>
-                      <DescriptionWrap>
-                        <LinkWrap>
-                          <Icon icon="github"/>{git.moreDetails.link}
-                        </LinkWrap>
-                        </DescriptionWrap>
-                  </div>}
-                    {git.colorBar.map(bar => {
-                      return (
-                        <ColorBarWrap 
-                          background={bar.color}
-                          width={bar.percent}
-                        />
-                        )
-                      })}
-                </StatsWrapper>
-                <PinkWrap>
-                  <EachPink onClick={()=> toggleInfo(git.title)}>
-                    <Icon icon="info"/>
-                  </EachPink>
-                  <EachPink><Icon icon="github"/> </EachPink>
-                  <EachPink><Icon icon="youtube"/> </EachPink>
-                </PinkWrap>
-                <Column height={10} />
-                <Column height={10} />
-                <Column height={10} />
-                <Column height={10} />
-                <Column height={10} />
-                </Column>
+      <DesktopWrap>
+        <Column>
+          <StatsWrapper>
+            {statsList.map(stats => {
+              return(
+                <EachStats key={stats.icon}>
+                  <CenteredIcon>
+                    <Icon icon={stats.icon} />
+                  </CenteredIcon>
+                  <div>
+                    {stats.content.map( content => {
+                    return (
+                      <StatsContent>{content}</StatsContent>
+                    )
+                  })}
+                  </div>
+                </EachStats>
               )
             })}
-          </div>
-      </Column>
-      </Column>
-      <Column height={10} />
-      <Column height={10} />
-      <Column display="flex">
-        <Button 
-          icon="arrow-down"
-          background="green"
-        />
-      </Column>
+          </StatsWrapper>
+        <Column height={10} />
+        <Column height={10} />
+        <Column height={10} />
+        <Column>
+            <StyledTitle>{gitTitle}</StyledTitle>
+        </Column>
+        <Column height={10} />
+        <Column height={10} />
+        <Column>
+            <div>
+              {gitList.map( git => {
+                return (
+                  <Column>
+                  <StatsWrapper key={git.title}>
+                    <GitTitle>{git.title}</GitTitle>
+                    <GitLanguages>{git.languages}</GitLanguages>
+                    {git.showMoreDetails && <div>
+                      <PercentWrap>
+                        {git.moreDetails.percentage.map(percent => {
+                          return (
+                            <div>
+                              <ul>
+                                <li>{percent}</li>
+                              </ul>
+                            </div>
+                          )
+                        })}
+                      </PercentWrap>
+                      <CommitWrap>
+                        {git.moreDetails.commits.map(commit => {
+                          return (
+                            <CenteredIcon><Icon icon={commit.icon}/>{commit.text}</CenteredIcon>
+                          )
+                        })
+                        }
+                      </CommitWrap>
+                      <DescriptionWrap>
+                        {git.moreDetails.description}
+                      </DescriptionWrap>
+                        <DescriptionWrap>
+                          <LinkWrap>
+                            <Icon icon="github"/>{git.moreDetails.link}
+                          </LinkWrap>
+                          </DescriptionWrap>
+                    </div>}
+                      {git.colorBar.map(bar => {
+                        return (
+                          <ColorBarWrap 
+                            background={bar.color}
+                            width={bar.percent}
+                          />
+                          )
+                        })}
+                  </StatsWrapper>
+                  <PinkWrap>
+                    <EachPink onClick={()=> toggleInfo(git.title)}>
+                      <Icon icon="info"/>
+                    </EachPink>
+                    <EachPink><Icon icon="github"/> </EachPink>
+                    <EachPink><Icon icon="youtube"/> </EachPink>
+                  </PinkWrap>
+                  <Column height={10} />
+                  <Column height={10} />
+                  <Column height={10} />
+                  <Column height={10} />
+                  <Column height={10} />
+                  </Column>
+                )
+              })}
+            </div>
+        </Column>
+        </Column>
+        <Column height={10} />
+        <Column height={10} />
+        <Column display="flex">
+          <Button 
+            icon="arrow-down"
+            background="green"
+          />
+        </Column>
+      </DesktopWrap>
       <Column height={10} />
 
     </>

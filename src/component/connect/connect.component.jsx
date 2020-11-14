@@ -7,6 +7,7 @@ import { get } from 'axios';
 import { ButtonWrapper, ConnectWrap } from './connect.style';
 import { SocialButton } from '../connect-social'
 import { SocialWrapper } from '../connect-info';
+import { DesktopWrap } from '../welcome/welcome.style';
 
 const Connect = () => {
   const [connect, updateConnect] = useState({})
@@ -42,32 +43,33 @@ const Connect = () => {
       <Column height={10} />
       <Column height={10} />
       <Column height={10} />
-      <Column>
-      <ConnectWrap>
-        <ConnectImg />
-
-          <ButtonWrapper>
-            {Object.values((socialList || {})).map(social => {
-              return <SocialButton isSelected={social.icon === selected.icon} key={social.icon}  onClick={() =>{ handleClick(social)} }
-              icon={social.icon} />
-            } ) }
-          </ButtonWrapper>
-      </ConnectWrap>
-      </Column>
-      <Column height={10} />
-      <Column>
-        {selected.hasOwnProperty('title') && <SocialWrapper
-          { ...selected }
-          handleClose={closeTheModal}
-        />}
-      </Column>
-      <Column height={10} />
-      <Column display="flex">
-        <Button 
-          icon="arrow-down"
-          background="green"
-        />
-      </Column>
+      <DesktopWrap>
+        <Column>
+          <ConnectWrap>
+            <ConnectImg />
+              <ButtonWrapper>
+                {Object.values((socialList || {})).map(social => {
+                  return <SocialButton isSelected={social.icon === selected.icon} key={social.icon}  onClick={() =>{ handleClick(social)} }
+                  icon={social.icon} />
+                } ) }
+              </ButtonWrapper>
+          </ConnectWrap>
+          </Column>
+          <Column height={10} />
+          <Column>
+            {selected.hasOwnProperty('title') && <SocialWrapper
+              { ...selected }
+              handleClose={closeTheModal}
+            />}
+          </Column>
+          <Column height={10} />
+          <Column display="flex">
+            <Button 
+              icon="arrow-down"
+              background="green"
+            />
+        </Column>
+      </DesktopWrap>
       <Column height={10} />
     </>
   )

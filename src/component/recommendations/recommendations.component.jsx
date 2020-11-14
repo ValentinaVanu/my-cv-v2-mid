@@ -7,6 +7,7 @@ import { Avatar, EachContact, EachRecom, RecommText, RecomContact, RecommName, R
 import Chloe from '../../assets/image/recommendations/chloe.JPG'
 import ChloeSecond from '../../assets/image/recommendations/chloe2.jpg'
 import Marian from '../../assets/image/recommendations/marian.jpg'
+import { DesktopWrap } from '../welcome/welcome.style'
 
 
 const avatarList = [Chloe, ChloeSecond, Marian]
@@ -40,37 +41,39 @@ const Recommendations = () => {
       </Column>
       <Column height={10} />
       <Column height={10} />
-      <Column>
-        <RecommWrap>
-          {recommendationsList.map((each, key) => {
-            return (
-              <div>
-                <EachRecom>
-                  <EachContact>
-                    <Avatar src={avatarList[key]} alt='img' width="50"/>
-                    <RecomContact>
-                      <RecommName>{each.name}</RecommName>
-                      <RecommJob>{each.jobTitle}</RecommJob>
-                    </RecomContact>
-                  </EachContact>
-                  <RecommText>{each.recomText}</RecommText>
-                </EachRecom>
-                <Column height={10} />
-                <Column height={10} />
-                <Column height={10} />
-              </div>
-              )
-          })}
-        </RecommWrap>
-      </Column>
-      <Column height={10} />
-      <Column height={10} />
-      <Column display="flex">
-        <Button 
-          icon="arrow-down"
-          background="green"
-        />
-      </Column>
+      <DesktopWrap>
+        <Column>
+          <RecommWrap>
+            {recommendationsList.map((each, key) => {
+              return (
+                <div>
+                  <EachRecom>
+                    <EachContact>
+                      <Avatar src={avatarList[key]} alt='img' width="50"/>
+                      <RecomContact>
+                        <RecommName>{each.name}</RecommName>
+                        <RecommJob>{each.jobTitle}</RecommJob>
+                      </RecomContact>
+                    </EachContact>
+                    <RecommText>{each.recomText}</RecommText>
+                  </EachRecom>
+                  <Column height={10} />
+                  <Column height={10} />
+                  <Column height={10} />
+                </div>
+                )
+            })}
+          </RecommWrap>
+        </Column>
+        <Column height={10} />
+        <Column height={10} />
+        <Column display="flex">
+          <Button 
+            icon="arrow-down"
+            background="green"
+          />
+        </Column>
+      </DesktopWrap>
       <Column height={10} />
     </>
   )
